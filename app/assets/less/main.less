@@ -99,3 +99,197 @@ a:focus {
 input {
     font-family: "FuturaPT";
 }
+
+
+// header
+
+header {
+    background-image: url(../img/header-background.png);
+    background-position: center;
+    height: 77px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 250px 420px 275px 1fr 1fr;
+    height: 77px;
+}
+
+.header-logo {
+    align-items: center;
+    display: flex;
+
+    svg {
+        fill: #FFF;
+        margin-right: 6px;
+        .trans();
+    }
+
+    &:hover svg {
+        fill: @red;
+    }
+}
+
+.header-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.header-nav__item {
+
+    a {
+        align-items: center;
+        color: #FFF;
+        display: flex;
+        font-size: 18px;
+        height: 100%;
+        .trans();
+        padding: 0 8px;
+
+        &:hover {
+            color: @blue;
+        }
+    }
+}
+
+.header-selects {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.header-selects__item {
+    margin: 0 14px;
+
+    span {
+        color: #FFF;
+        display: block;
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .header-selects__item-wrapper {
+        position: relative;
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid #e8e8e8;
+            border-radius: 5px;
+            color: #FFF;
+            cursor: pointer;
+            font-family: "FuturaPT";
+            height: 29px;
+            min-width: 108px;
+            padding: 0 30px 0 5px;
+            position: relative;
+
+            &:focus {
+                outline: none;
+            }
+
+            option {
+                color: @black;
+            }
+        }
+
+        &::after {
+            background: transparent;
+            border-right: 2px solid #FFF;
+            border-top: 2px solid #FFF;
+            content: "";
+            height: 4px;
+            pointer-events: none;
+            position: absolute;
+            right: 8px;
+            top: 10px;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            width: 4px;
+            z-index: 2;
+        }
+    }
+}
+
+.header-socials {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.header-socials__item {
+    
+    a {
+        align-items: center;
+        display: flex;
+        height: 42px;
+        justify-content: center;
+        padding: 14px;
+
+        svg {
+            fill: #FFF;
+            .trans();
+        }
+
+        &:hover svg {
+            fill: @blue;
+        }
+    }
+}
+
+.header-basket {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-basket__link {
+    display: flex;
+    margin-right: 15px;
+
+    svg {
+        fill: #FFF;
+        margin-right: 4px;
+        .trans();
+    }
+    
+    span {
+        align-items: center;
+        background-color: @orange;
+        border-radius: 50%;
+        color: #FFF;
+        display: flex;
+        font-weight: 900;
+        height: 26px;
+        min-width: 26px;
+        justify-content: center;
+        width: 26px;
+    }
+
+    &:hover svg {
+        fill: @orange;
+    }
+}
+
+.header-basket__price {
+
+    span:first-of-type {
+        color: #FFF;
+        display: block;
+        font-weight: bold;
+    }
+
+    span {
+        color: #FFF;
+        display: block;
+    }
+}
+
+
