@@ -652,3 +652,53 @@ header {
   font-family: "FuturaPTBook";
   font-size: 18px;
 }
+.specific-product-block {
+  background-color: #393939;
+  padding: 90px 0;
+}
+.specific-product-block .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.specific-product-block__half iframe,
+.specific-product-block__half video {
+  height: 390px;
+  width: 100%;
+}
+.specific-product-block__half h2 {
+  color: #FFF;
+  font-size: 41px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.specific-product-block__half:first-of-type {
+  margin-right: 28px;
+}
+.specific-product-block__half-list span {
+  border-radius: 50px;
+  color: #FFF;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 600;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+.specific-product-block__half-list p {
+  color: #FFF;
+  font-size: 18px;
+  font-family: "FuturaPTBook";
+}
+.specific-product-block__half-list li {
+  margin-bottom: 36px;
+}
+.specific-product-block__half-list li:last-of-type {
+  margin-bottom: 0;
+}
+.specific-product-block__half-list li:nth-of-type(odd) span {
+  background-color: #c60d3a;
+}
+.specific-product-block__half-list li:nth-of-type(even) span {
+  background-color: #45959a;
+}
