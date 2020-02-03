@@ -606,3 +606,49 @@ header {
 .main-bunner__slider-nav-next:hover {
   background-color: #45959a;
 }
+.advantages-block {
+  background-color: #232323;
+}
+.advantages-block-list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 68px 15px;
+}
+.advantages-block-list__item {
+  align-items: center;
+  display: flex;
+}
+.advantages-block-list__item-icon {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  fill: #FFF;
+  height: 66px;
+  justify-content: center;
+  margin: 0 16px 0 12px;
+  min-width: 66px;
+  width: 66px;
+}
+.advantages-block-list__item-icon.advantages-block-list__item-icon_orange {
+  background-color: #f35905;
+}
+.advantages-block-list__item-icon.advantages-block-list__item-icon_red {
+  background-color: #c60d3a;
+}
+.advantages-block-list__item-icon.advantages-block-list__item-icon_blue {
+  background-color: #45959a;
+}
+.advantages-block-list__item-headline {
+  color: #FFF;
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.advantages-block-list__item-text {
+  color: #FFF;
+  display: block;
+  font-family: "FuturaPTBook";
+  font-size: 18px;
+}
