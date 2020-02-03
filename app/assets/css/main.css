@@ -385,6 +385,13 @@ header {
   min-width: 108px;
   padding: 0 30px 0 5px;
   position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.header-selects__item .header-selects__item-wrapper select:hover {
+  border-color: #45959a;
 }
 .header-selects__item .header-selects__item-wrapper select:focus {
   outline: none;
@@ -411,6 +418,9 @@ header {
   width: 4px;
   z-index: 2;
 }
+.header-selects__item .header-selects__item-wrapper:hover::after {
+  border-color: #45959a;
+}
 .header-socials {
   align-items: center;
   display: flex;
@@ -433,14 +443,25 @@ header {
 .header-socials__item a:hover svg {
   fill: #45959a;
 }
+.header-basket__wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
 .header-basket {
   align-items: center;
   display: flex;
   justify-content: flex-end;
 }
+.header-basket:hover .header-basket__link svg {
+  fill: #f35905;
+}
+.header-basket:hover .header-basket__price span:nth-of-type(2) {
+  color: #f35905;
+}
 .header-basket__link {
   display: flex;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .header-basket__link svg {
   fill: #FFF;
@@ -462,9 +483,6 @@ header {
   justify-content: center;
   width: 26px;
 }
-.header-basket__link:hover svg {
-  fill: #f35905;
-}
 .header-basket__price span:first-of-type {
   color: #FFF;
   display: block;
@@ -473,6 +491,11 @@ header {
 .header-basket__price span {
   color: #FFF;
   display: block;
+  text-align: end;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
 }
 .main-bunner__wrapper {
   position: relative;
