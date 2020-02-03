@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTLight.otf") format("opentype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTMedium.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTDemi.otf") format("opentype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTBold.otf") format("opentype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTHeavy.otf") format("opentype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "FuturaPTBook";
+    src: url("../fonts/FuturaPTBook.otf") format("opentype");
+    font-weight: 500;
+}
+
+.trans(@time: 0.4s) {
+    transition: all @time ease-in-out;
+    -webkit-transition: all @time ease-in-out;
+    -moz-transition: all @time ease-in-out;
+    -o-transition: all @time ease-in-out;
+}
+
+@black: #232323;
+@red: #c60d3a;
+@orange: #f35905;
+@blue: #45959a;
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #FFF;
+    font-family: 'FuturaPT', sans-serif;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'FuturaPT', sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    color: #232323;
+    font-family: 'FuturaPT', sans-serif;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 0 15px;
+}
+
+*::selection {
+    background-color: #c60d3a;
+    color: #232323;
+}
+
+input {
+    font-family: "FuturaPT";
+}
