@@ -18,4 +18,9 @@ $(document).ready(function () {
         ]
     });
 
+    // faq-block 
+    $(document).on('click','.faq-block-list__item a',function(){
+        $(this).parent().siblings().children().removeClass('active');
+        $(this).toggleClass('active');
+    });
 });
