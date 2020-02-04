@@ -683,11 +683,6 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.specific-product-block__half iframe,
-.specific-product-block__half video {
-  height: 390px;
-  width: 100%;
-}
 .specific-product-block__half h2 {
   color: #FFF;
   font-size: 41px;
@@ -696,6 +691,9 @@ header {
 }
 .specific-product-block__half:first-of-type {
   margin-right: 28px;
+}
+.specific-product-block__half img {
+  width: 100%;
 }
 .specific-product-block__half-list span {
   border-radius: 50px;
@@ -1172,7 +1170,7 @@ header {
 .merchandise-block {
   padding: 80px 0 120px;
 }
-.merchandise-block-headline {
+.block-headline-wrapper {
   align-items: center;
   display: flex;
   height: 56px;
@@ -1180,13 +1178,13 @@ header {
   margin-bottom: 80px;
   position: relative;
 }
-.merchandise-block-headline h2 {
+.block-headline-wrapper h2 {
   color: #232323;
   font-size: 30px;
   font-weight: 600;
   text-align: center;
 }
-.merchandise-block-headline a {
+.block-headline-wrapper a {
   background-color: #232323;
   border: 1px solid #232323;
   border-radius: 50px;
@@ -1205,7 +1203,7 @@ header {
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
 }
-.merchandise-block-headline a:hover {
+.block-headline-wrapper a:hover {
   background-color: transparent;
   color: #232323;
 }
@@ -1281,4 +1279,76 @@ header {
   position: absolute;
   width: calc(100% - 36px);
   z-index: 10;
+}
+.about-brums {
+  background-color: #232323;
+  padding: 84px 0 96px;
+}
+.about-brums .block-headline-wrapper {
+  margin-bottom: 56px;
+}
+.about-brums .block-headline-wrapper h2 {
+  color: #FFF;
+}
+.about-brums .block-headline-wrapper a {
+  background-color: #393939;
+  border: 1px solid #393939;
+}
+.about-brums .block-headline-wrapper a:hover {
+  background-color: #FFF;
+  color: #393939;
+}
+.about-brums .container > span {
+  color: #FFF;
+  display: block;
+  font-size: 24px;
+  font-family: "FuturaPTBook";
+  margin-bottom: 12px;
+  text-align: center;
+}
+.about-brums-list {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.about-brums-list__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-brums-list__item a {
+  display: block;
+  margin-bottom: 3px;
+  width: 100%;
+}
+.about-brums-list__item a img {
+  display: block;
+  height: 265px;
+  object-fit: cover;
+  width: 467px;
+}
+.about-brums-list__item span {
+  align-items: center;
+  color: #FFF;
+  display: flex;
+  font-size: 24px;
+  font-family: "FuturaPTBook";
+  height: 265px;
+  justify-content: center;
+  padding: 0 80px;
+  text-align: center;
+  width: 467px;
+}
+.about-brums-list__item:nth-of-type(1) span {
+  background-color: #c60d3a;
+}
+.about-brums-list__item:nth-of-type(2) a {
+  margin-bottom: 0;
+  order: 1;
+}
+.about-brums-list__item:nth-of-type(2) span {
+  background-color: #f35905;
+  margin-bottom: 3px;
+}
+.about-brums-list__item:nth-of-type(3) span {
+  background-color: #45959a;
 }

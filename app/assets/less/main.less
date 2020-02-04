@@ -779,11 +779,6 @@ header {
 }
 
 .specific-product-block__half {
-    iframe, video {
-        height: 390px;
-        width: 100%;
-    }
-
     h2 {
         color: #FFF;
         font-size: 41px;
@@ -793,6 +788,10 @@ header {
 
     &:first-of-type {
         margin-right: 28px;
+    }
+
+    img {
+        width: 100%;
     }
 }
 
@@ -1358,7 +1357,7 @@ header {
     padding: 80px 0 120px;
 }
 
-.merchandise-block-headline {
+.block-headline-wrapper {
     align-items: center;
     display: flex;
     height: 56px;
@@ -1478,5 +1477,103 @@ header {
     position: absolute;
     width: calc(100% - 36px);
     z-index: 10;
+}
+
+
+// about drums
+
+.about-brums {
+    background-color: @black;
+    padding: 84px 0 96px;
+
+    .block-headline-wrapper {
+        margin-bottom: 56px;
+        
+        h2 {
+            color: #FFF;
+        }
+
+        a {
+            background-color: #393939;
+            border: 1px solid #393939;
+
+            &:hover {
+                background-color: #FFF;
+                color: #393939;
+            }
+        }
+    }
+
+    .container > span {
+        color: #FFF;
+        display: block;
+        font-size: 24px;
+        .f-book();
+        margin-bottom: 12px;
+        text-align: center;
+    }
+}
+
+.about-brums-list {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about-brums-list__item {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+        display: block;
+        margin-bottom: 3px;
+        width: 100%;
+
+        img {
+            display: block;
+            height: 265px;
+            object-fit: cover;
+            width: 467px;
+        }
+    }
+
+    span {
+        align-items: center;
+        color: #FFF;
+        display: flex;
+        font-size: 24px;
+        .f-book();
+        height: 265px;
+        justify-content: center;
+        padding: 0 80px;
+        text-align: center;
+        width: 467px; 
+    }
+
+    &:nth-of-type(1) {
+
+        span {
+            background-color: @red;
+        }
+    }
+
+    &:nth-of-type(2) {
+        a {
+            margin-bottom: 0;
+            order: 1;
+        }
+
+        span {
+            background-color: @orange;
+            margin-bottom: 3px;
+        }
+    }
+
+    &:nth-of-type(3) {
+
+        span {
+            background-color: @blue;
+        }
+    }
 }
 
