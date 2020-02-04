@@ -1352,4 +1352,131 @@ header {
 
 
 
+// Блок мерча
+
+.merchandise-block {
+    padding: 80px 0 120px;
+}
+
+.merchandise-block-headline {
+    align-items: center;
+    display: flex;
+    height: 56px;
+    justify-content: center;
+    margin-bottom: 80px;
+    position: relative;
+    
+    h2 {
+        color: @black;
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    a {
+        background-color: @black;
+        border: 1px solid @black;
+        border-radius: 50px;
+        color: #FFF;
+        display: inline-block;
+        height: 56px;
+        font-size: 18px;
+        line-height: 56px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+        width: 133px;
+        .trans();
+
+        &:hover {
+            background-color: transparent;
+            color: @black;
+        }
+    }
+}
+
+.merchandise-block-list {
+    display: grid;
+    gap: 8px;
+    grid-template-areas: 
+    "merch-item-1 merch-item-2 merch-item-2"
+    "merch-item-3 merch-item-2 merch-item-2";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.merchandise-block-list__item {
+    background-color: #e0e3e8;
+    position: relative;
+    overflow: hidden;
+
+    img:nth-of-type(1) {
+        opacity: 1;
+        .trans();
+        width: 100%;
+    }
+
+    img:nth-of-type(2) {
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        .trans();
+        width: 100%;
+    }
+
+    &:hover {
+        img:nth-of-type(1) {
+            opacity: 0;
+        }
+    
+        img:nth-of-type(2) {
+            opacity: 1;
+        }
+    }
+
+    &:nth-of-type(1) {
+        grid-area: merch-item-1;
+        padding: 24px;
+
+        img:nth-of-type(2) {
+            left: 50%;
+            top: 24px;
+            transform: translateX(-50%);
+            width: calc(100% - 48px);
+        }
+    }
+
+    &:nth-of-type(2) {
+        grid-area: merch-item-2;
+        padding: 60px;
+
+        img:nth-of-type(2) {
+            left: 50%;
+            top: 60px;
+            transform: translateX(-50%);
+            width: calc(100% - 120px);
+        }
+    }
+
+    &:nth-of-type(3) {
+        grid-area: merch-item-3;
+        padding: 24px;
+
+        img:nth-of-type(2) {
+            left: 50%;
+            top: 24px;
+            transform: translateX(-50%);
+            width: calc(100% - 48px);
+        }
+    }
+}
+
+.merchandise-block-list__item-info {
+    bottom: 40px;
+    left: 20px;
+    position: absolute;
+    width: calc(100% - 36px);
+    z-index: 10;
+}
 
