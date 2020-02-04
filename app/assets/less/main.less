@@ -1027,4 +1027,329 @@ header {
     }
 }
 
+// Блок продуктов
+
+.products-block {
+    padding: 68px 15px 64px;
+
+    h2 {
+        color: @black;
+        font-size: 41px;
+        font-weight: 600;
+        margin-bottom: 68px;
+        text-align: center;
+    }
+}
+
+.products-block-list {
+    display: grid;
+    gap: 6px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.products-block-list__item {
+    box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 32px;
+    padding: 24px 18px 24px 24px;
+    position: relative;
+}
+
+.products-block-list__item-label {
+    background-color: @black;
+    border-radius: 0 50px 50px 0;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    height: 53px;
+    line-height: 53px;
+    left: 0;
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    top: 20px;
+    width: 140px;
+    z-index: 10;
+
+    &.products-block-list__item-label_best-seller {
+        background-color: @orange;
+    }
+
+    &.products-block-list__item-label_popular {
+        background-color: @red;
+    }
+
+    &.products-block-list__item-label_new {
+        background-color: @blue;
+    }
+}
+
+.products-block-list__item-sale {
+    align-items: center;
+    background-color: @red;
+    border-radius: 50%;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    height: 62px;
+    justify-content: center;
+    position: absolute;
+    right: 24px;
+    top: 20px;
+    width: 62px;
+    z-index: 10;
+
+    span:nth-of-type(1) {
+        display: block;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+
+    span:nth-of-type(2) {
+        display: block;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.products-block-list__item-img {
+    display: block;
+    height: 245px;
+    position: relative;
+
+    img:nth-of-type(1) {
+        width: 295px;
+        height: 245px;
+        display: block;
+        object-fit: contain;
+        opacity: 1;
+        margin: 0 auto;
+        .trans();
+    }
+
+    img:nth-of-type(2) {
+        width: 295px;
+        height: 245px;
+        display: block;
+        object-fit: contain;
+        opacity: 0;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        top: 0;
+        .trans();
+    }
+}
+
+.products-block-list__item:hover {
+
+    .products-block-list__item-img {
+        
+        img:nth-of-type(1) {
+            opacity: 0;
+        }
+
+        img:nth-of-type(2) {
+            opacity: 1;
+        } 
+    }
+}
+
+.products-block-list__item-headline {
+    color: @black;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    .trans();
+
+    &:hover {
+        color: @blue;
+    }
+}
+
+.products-block-list__item-notes {
+    margin-bottom: 16px;
+
+    span {
+        color: @black;
+        display: block;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            color: #919191;
+            font-weight: 600;
+            margin-right: 3px;
+        }
+    }
+}
+
+.products-block-list__item-gift {
+    color: @black;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.products-block-list__item-main {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-right: 7px;
+}
+
+.products-block-list__item-status {
+    color: @blue;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.products-block-list__item-price {
+    align-items: flex-end;
+    display: flex;
+    height: 56px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.products-block-list__item-price-old {
+    color: #919191;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-decoration: line-through;
+}
+
+.products-block-list__item-price-actual {
+    color: @black;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.products-block-list__item-bottom {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-block-list__item-reviews {
+    display: block;
+
+    span:nth-of-type(1) {
+        color: @black;
+        font-size: 14px;
+        font-weight: 600;
+        margin-right: 4px;
+    }
+
+    span:nth-of-type(2) {
+        background-color: @red;
+        border: 1px solid @red;
+        border-radius: 50px;
+        color: #FFF;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 12px;
+        .trans();
+    }
+
+    &:hover span:nth-of-type(2) {
+        background-color: transparent;
+        color: @red;
+    }
+}
+
+.products-block-list__item-learn-more {
+    background-color: @black;
+    border: 1px solid @black;
+    border-radius: 50px;
+    color: #FFF;
+    font-size: 14px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    .trans();
+    width: 104px;
+
+    &:hover {
+        background-color: transparent;
+        color: @black;
+    }
+}
+
+.products-block-to-all {
+    background-color: @black;
+    border: 1px solid @black;
+    border-radius: 50px;
+    color: #FFF;
+    display: block;
+    font-size: 18px;
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto;
+    text-align: center;
+    .trans();
+    width: 133px;
+
+    &:hover {
+        background-color: transparent;
+        color: @black;
+    }
+}
+
+
+// блок улучшений для барабанов
+
+.products-block.products-block_enhancement {
+    background-color: #f8f8f8;
+    padding: 68px 0 64px;
+
+    .products-block-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .products-block-list__item-headline {
+        margin-bottom: 12px;
+    }
+
+    .products-block-list__item-main {
+        flex-wrap: wrap;
+    }
+
+    .products-block-list__item-status {
+        order: 1;
+    }
+
+    .products-block-list__item-price {
+        align-items: center;
+        flex-direction: row;
+        height: auto;
+        justify-content: start;
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .products-block-list__item-price-old {
+        margin-bottom: 0;
+        margin-left: 28px;
+        order: 1;
+    }
+}
+
+
+
 
