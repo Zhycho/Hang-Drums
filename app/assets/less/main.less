@@ -1488,7 +1488,7 @@ header {
 
     .block-headline-wrapper {
         margin-bottom: 56px;
-        
+
         h2 {
             color: #FFF;
         }
@@ -1576,4 +1576,80 @@ header {
         }
     }
 }
+
+
+// about manufacturer
+
+.about-manufacturer {
+    padding: 80px 0 92px;
+}
+
+.about-manufacturer-two-half {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    div:nth-of-type(1) {
+        margin: 16px 68px 16px 16px;
+
+        span {
+            color: @black;
+            .f-book();
+            font-size: 14px;
+            padding-left: 46px;
+        }
+        
+        img {
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        ul {
+
+            li {
+                color: @black;
+                .f-book();
+                padding-bottom: 40px;
+                padding-left: 46px;
+                position: relative;
+
+                &::before {
+                    background-color: @red;
+                    border-radius: 50%;
+                    content: "";
+                    display: block;
+                    height: 10px;
+                    left: 8px;
+                    position: absolute;
+                    top: 7px;
+                    width: 10px;
+                }
+
+                &::after {
+                    background-color: @red;
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    left: 12px;
+                    position: absolute;
+                    top: 7px;
+                    width: 1px;
+                }
+            }
+
+            li:last-of-type {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    div:nth-of-type(2) {
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
 

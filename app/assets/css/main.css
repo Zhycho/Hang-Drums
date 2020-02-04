@@ -1352,3 +1352,57 @@ header {
 .about-brums-list__item:nth-of-type(3) span {
   background-color: #45959a;
 }
+.about-manufacturer {
+  padding: 80px 0 92px;
+}
+.about-manufacturer-two-half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-manufacturer-two-half div:nth-of-type(1) {
+  margin: 16px 68px 16px 16px;
+}
+.about-manufacturer-two-half div:nth-of-type(1) span {
+  color: #232323;
+  font-family: "FuturaPTBook";
+  font-size: 14px;
+  padding-left: 46px;
+}
+.about-manufacturer-two-half div:nth-of-type(1) img {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.about-manufacturer-two-half div:nth-of-type(1) ul li {
+  color: #232323;
+  font-family: "FuturaPTBook";
+  padding-bottom: 40px;
+  padding-left: 46px;
+  position: relative;
+}
+.about-manufacturer-two-half div:nth-of-type(1) ul li::before {
+  background-color: #c60d3a;
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 10px;
+  left: 8px;
+  position: absolute;
+  top: 7px;
+  width: 10px;
+}
+.about-manufacturer-two-half div:nth-of-type(1) ul li::after {
+  background-color: #c60d3a;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 12px;
+  position: absolute;
+  top: 7px;
+  width: 1px;
+}
+.about-manufacturer-two-half div:nth-of-type(1) ul li:last-of-type::after {
+  display: none;
+}
+.about-manufacturer-two-half div:nth-of-type(2) img {
+  width: 100%;
+}
