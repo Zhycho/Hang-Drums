@@ -832,3 +832,174 @@ header {
         background-color: @blue;
     }
 }
+
+
+// блок отзывов 
+
+.reviews-block {
+    padding: 72px 15px;
+
+    h2 {
+        color: @black;
+        font-size: 41px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+.reviews-block-list {
+    max-width: 1000px;
+}
+
+.reviews-block-list__item {
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    margin-bottom: 23px;
+    padding: 0 0 38px 76px;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+}
+
+.reviews-block-list__item-avatar {
+    height: 90px;
+    margin-right: 17px;
+    min-width: 90px;
+    overflow: hidden;
+    width: 90px;
+
+    img {
+        border-radius: 50%;
+        object-fit: cover;
+        height: 90px;
+        width: 90px;
+    }
+}
+
+.reviews-block-list__item-main {
+    padding-top: 4px;
+
+    time {
+        color: @black;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 12px;
+    }
+}
+
+.reviews-block-list__item-rating {
+    display: flex;
+    margin-bottom: 24px;
+
+    li {
+        fill: #b8b8b8;
+        margin-right: 2px;
+    }
+
+    li.active {
+        fill: @black;
+    }
+}
+
+.reviews-block-list__item-gallery {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 215px 215px 215px;
+    margin-bottom: 16px;
+
+    li img {
+        display: block;
+        height: 135px;
+        object-fit: cover;
+        width: 215px;
+    }
+}
+
+.reviews-block-list__item-text {
+    padding-bottom: 36px;
+    position: relative;
+
+    p {
+        color: @black;
+        .f-book();
+        font-size: 18px;
+    }
+
+    &::after {
+        background-color: #ebebeb;
+        content: "";
+        display: block;
+        height: 1px;
+        margin-top: 24px;
+        width: 240px;
+    }
+}
+
+.reviews-block-list__item-product {
+    align-items: center;
+    display: flex;
+}
+
+.reviews-block-list__item-product-img {
+    margin-right: 16px;
+
+    img {
+        height: 95px;
+        object-fit: cover;
+        width: 140px;
+    }
+}
+
+.reviews-block-list__item-product-icon {
+    align-items: center;
+    background-color: @black;
+    border-radius: 50%;
+    display: flex;
+    fill: #FFF;
+    height: 40px;
+    justify-content: center;
+    margin-right: 10px;
+    width: 39px;
+}
+
+.reviews-block-list__item-product-name {
+
+    span {
+        color: @black;
+        display: block;
+        font-weight: 600;
+    }
+
+    a {
+        color: @black;
+        font-size: 14px;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.more-reviews {
+    background-color: @black;
+    border: 1px solid @black;
+    border-radius: 50px;
+    color: #FFF;
+    display: block;
+    font-size: 18px;
+    height: 56px;
+    line-height: 56px;
+    margin: 0 auto;
+    text-align: center;
+    .trans();
+    width: 210px;
+
+    &:hover {
+        background-color: transparent;
+        color: @black;
+    }
+}
+
