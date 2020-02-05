@@ -18,6 +18,24 @@ $(document).ready(function () {
         ]
     });
 
+    // Слайдере в баннере на главной
+    $('.js--products-block-list__slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        dots: false,
+        swipe: false,
+        prevArrow: $('.js--products-block-list__slider-nav-prev'),
+        nextArrow: $('.js--products-block-list__slider-nav-next'),
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    swipe: true,
+                }
+            }
+        ]
+    });
+
     // faq-block 
     $(document).on('click','.faq-block-list__item a',function(){
         $(this).parent().siblings().children().removeClass('active');
