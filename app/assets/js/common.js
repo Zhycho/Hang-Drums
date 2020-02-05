@@ -28,9 +28,9 @@ $(document).ready(function () {
         nextArrow: $('.js--products-block-list__slider-nav-next'),
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 1441,
                 settings: {
-                    swipe: true,
+                    slidesToShow: 4,
                 }
             }
         ]
