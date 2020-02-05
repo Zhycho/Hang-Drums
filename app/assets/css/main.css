@@ -1236,8 +1236,8 @@ header {
 .products-block-list__slider-wrapper {
   position: relative;
 }
-.products-block-list__slider-nav-prev,
-.products-block-list__slider-nav-next {
+.default__slider-nav-prev,
+.default__slider-nav-next {
   align-items: center;
   background-color: #e9e9e9;
   cursor: pointer;
@@ -1254,14 +1254,14 @@ header {
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
 }
-.products-block-list__slider-nav-prev:hover,
-.products-block-list__slider-nav-next:hover {
+.default__slider-nav-prev:hover,
+.default__slider-nav-next:hover {
   fill: #45959a;
 }
-.products-block-list__slider-nav-prev {
+.default__slider-nav-prev {
   left: 0;
 }
-.products-block-list__slider-nav-next {
+.default__slider-nav-next {
   right: 0;
 }
 .merchandise-block {
@@ -1588,4 +1588,51 @@ header {
   color: #232323;
   font-family: "FuturaPTBook";
   font-size: 18px;
+}
+.helpful-information-block {
+  padding: 52px 0 80px;
+}
+.helpful-information-block h2 {
+  color: #232323;
+  font-size: 41px;
+  font-weight: 600;
+  margin-bottom: 52px;
+  text-align: center;
+}
+.helpful-information-slider__wrapper {
+  position: relative;
+}
+.helpful-information-slider__wrapper .default__slider-nav-prev,
+.helpful-information-slider__wrapper .default__slider-nav-next {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.helpful-information-slider__item {
+  margin: 0 3px;
+  position: relative;
+}
+.helpful-information-slider__item img {
+  width: 100%;
+}
+.helpful-information-slider__item span {
+  bottom: 32px;
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 900;
+  left: 32px;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  width: calc(100% - 64px);
+}
+.helpful-information-slider__item a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.helpful-information-slider__item:hover span {
+  color: #45959a;
 }

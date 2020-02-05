@@ -36,6 +36,24 @@ $(document).ready(function () {
         ]
     });
 
+    // helpful-info slider
+    $('.js--helpful-information-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        swipe: false,
+        prevArrow: $('.js--helpful-information__slider-nav-prev'),
+        nextArrow: $('.js--helpful-information__slider-nav-next'),
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    swipe: true,
+                }
+            }
+        ]
+    });
+
     // faq-block 
     $(document).on('click','.faq-block-list__item a',function(){
         $(this).parent().siblings().children().removeClass('active');
