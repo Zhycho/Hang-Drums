@@ -1811,3 +1811,28 @@ header {
 .footer-bottom__praweb a:hover {
   fill: #FFF;
 }
+.cookies {
+  background-color: #45959a;
+}
+.cookies .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.cookies .container p {
+  color: #FFF;
+}
+.cookies .container a {
+  align-items: center;
+  background-color: #232323;
+  border: 1px solid #232323;
+  border-radius: 50px;
+  color: #FFF;
+  display: flex;
+  font-size: 18px;
+  height: 56px;
+  justify-content: center;
+  margin-left: 44px;
+  width: 134px;
+}
