@@ -1833,6 +1833,22 @@ header {
     background-color: #fff;
   }
 }
+.accessories-block .products-block-to-all {
+  background-color: #fff;
+  color: #232323;
+  display: none;
+  margin-top: 32px;
+  width: 214px;
+}
+.accessories-block .products-block-to-all:hover {
+  background-color: #232323;
+  color: #FFF;
+}
+@media (max-width: 768px) {
+  .accessories-block .products-block-to-all {
+    display: block;
+  }
+}
 .products-block-list.js--products-block-list__slider {
   display: block;
 }
