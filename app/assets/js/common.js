@@ -10,7 +10,7 @@ $(document).ready(function () {
         nextArrow: $('.js--main-bunner__slider-nav-next'),
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 769,
                 settings: {
                     swipe: true,
                 }
@@ -32,6 +32,25 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 4,
                 }
+            },
+            {
+                breakpoint: 1201,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 601,
+                settings: {
+                    slidesToShow: 1,
+                    swipe: true,
+                }
             }
         ]
     });
@@ -46,10 +65,14 @@ $(document).ready(function () {
         nextArrow: $('.js--helpful-information__slider-nav-next'),
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 993,
                 settings: {
-                    swipe: true,
+                    slidesToShow: 3,
                 }
+            },
+            {
+                breakpoint: 769,
+                settings: 'unslick'
             }
         ]
     });
