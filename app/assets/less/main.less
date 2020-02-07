@@ -2591,7 +2591,8 @@ header {
 }
 
 .faq-block-list__item {
-    margin-bottom: 4px;
+    max-width: 1305px;
+    margin: 0 auto 4px;
 
     a {
         align-items: center;
@@ -3464,5 +3465,151 @@ header {
         .f-book();
         font-size: 16px;
         font-weight: normal;
+    }
+}
+
+.drums-tune-comparison-block {
+    background-color: @black;
+    padding: 92px 0 100px;
+
+    .container {
+        max-width: 1050px;
+
+        h2 {
+            color: #FFF;
+            font-size: 41px;
+            font-weight: 600;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+    }
+}
+
+.drums-tune-comparison-block__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+
+    & > li {
+        display: flex;
+        margin-bottom: 13px;
+
+        &:nth-of-type(even) {
+            margin-left: 60px;
+        }
+
+        a {
+            background-color: @orange;
+            border-radius: 50px;
+            color: #FFF;
+            margin-right: 12px;
+            white-space: nowrap;
+            height: 32px;
+            padding: 5px 12px;
+            .trans();
+
+            &:hover {
+                background-color: @blue;
+            }
+        }
+    }
+
+    &::after {
+        background-color: #333333;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        width: 1px;
+    }
+}
+
+.drums-tune-comparison-block__notes-list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        color: #FFF;
+        font-size: 18px;
+        margin-right: 6px;
+    }
+}
+
+.steps-get-drums-block {
+    background-color: @black;
+
+    h2 {
+        background-color: #fff;
+        color: @black;
+        font-size: 41px;
+        font-weight: 600;
+        text-align: center;
+        padding: 88px 15px;
+    }
+}
+
+.steps-get-drums-block__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    li {
+        align-items: center;
+        border-right: 1px solid #2f2f2f;
+        display: flex;
+        padding: 55px 20px;
+
+        .steps-get-drums-block__list-number {
+            align-items: center;
+            border-radius: 50%;
+            color: #FFF;
+            display: flex;
+            font-size: 30px;
+            font-weight: 600;
+            height: 44px;
+            justify-content: center;
+            margin-right: 12px;
+            min-width: 44px;
+            width: 44px;
+        }
+
+        &:nth-of-type(1) {
+            border-left: 1px solid #2f2f2f;
+
+            .steps-get-drums-block__list-number {
+                background-color: @orange;
+            }
+        }
+
+        &:nth-of-type(2) {
+
+            .steps-get-drums-block__list-number {
+                background-color: @red;
+            }
+        }
+
+        &:nth-of-type(3) {
+
+            .steps-get-drums-block__list-number {
+                background-color: @blue;
+            }
+        }
+
+        &:nth-of-type(4) {
+
+            .steps-get-drums-block__list-number {
+                background-color: #FFF;
+                color: @black;
+            }
+        }
+
+        p {
+            color: #FFF;
+            font-size: 18px;
+            font-weight: 600;
+        }
     }
 }
