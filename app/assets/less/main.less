@@ -707,6 +707,7 @@ header {
 
 .mm-listitem:after {
     background-color: #fff;
+    border-color: #FFF;
     left: 15px;
     right: 15px;
 }
@@ -3295,6 +3296,10 @@ header {
 .catalog-tabs__wrapper {
     background-color: #232323;
     border-top: 6px solid #FFF;
+
+    @media (max-width: 768px) {
+        border-top: 4px solid #FFF;
+    }
 }
 
 .catalog-tabs {
@@ -3306,6 +3311,16 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
     max-width: 1454px;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 768px) {
+        gap: 4px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 }
 
 .catalog-tabs__item {
@@ -3327,6 +3342,7 @@ header {
 
             &:first-of-type {
                 display: block;
+                width: 100%;
             }
 
             &:nth-of-type(2) {
@@ -3336,6 +3352,7 @@ header {
                 position: absolute;
                 top: 0;
                 .trans();
+                width: 100%;
             }
         }
 
@@ -3357,6 +3374,14 @@ header {
                 font-size: 18px;
                 font-weight: normal;
                 .trans();
+            }
+
+            @media (max-width: 420px) {
+                font-size: 20px;
+
+                span {
+                    font-size: 16px;
+                }
             }
         }
 
@@ -3406,6 +3431,10 @@ header {
             }
         }
     }
+
+    @media (max-width: 768px) {
+        max-width: 420px;
+    }
 }
 
 .see-also-block {
@@ -3417,6 +3446,14 @@ header {
         font-weight: 600;
         margin-bottom: 68px;
         text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 15px;
+
+        h2 {
+            margin-bottom: 40px;
+        }
     }
 }
 
@@ -3443,6 +3480,15 @@ header {
 
         &:hover .see-also-block__list-headline {
             color: @blue;
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+        li {
+            max-width: 420px;
         }
     }
 }
@@ -3481,6 +3527,17 @@ header {
             font-weight: 600;
             margin-bottom: 60px;
             text-align: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 0 60px;
+
+        .container {
+
+            h2 {
+                margin-bottom: 44px;
+            }
         }
     }
 }
@@ -3525,6 +3582,21 @@ header {
         transform: translateX(-50%);
         width: 1px;
     }
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+
+        & > li {
+
+            &:nth-of-type(even) {
+                margin-left: 0;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+    }
 }
 
 .drums-tune-comparison-block__notes-list {
@@ -3549,6 +3621,12 @@ header {
         font-weight: 600;
         text-align: center;
         padding: 88px 15px;
+    }
+
+    @media (max-width: 576px) {
+        .container {
+            padding: 0;
+        }
     }
 }
 
@@ -3612,4 +3690,58 @@ header {
             font-weight: 600;
         }
     }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr;
+
+        li {
+
+            &:nth-of-type(1), &:nth-of-type(2) {
+                border-bottom: 1px solid #2f2f2f;
+            }
+
+            &:nth-of-type(3) {
+                border-left: 1px solid #2f2f2f;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+
+        li {
+            background-color: #343434;
+            border: none;
+
+            &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
+                border: none;
+                border-bottom: 9px solid @black;
+            }
+        }
+    }
 }
+
+.commercial-bunner {
+    position: relative;
+
+    img {
+        display: block;
+        height: 178px;
+        object-fit: cover;
+        width: 100%;
+
+        @media (max-width: 1400px) {
+            height: auto;
+        }
+    }
+
+    a {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+

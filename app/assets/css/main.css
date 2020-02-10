@@ -656,6 +656,7 @@ header {
 }
 .mm-listitem:after {
   background-color: #fff;
+  border-color: #FFF;
   left: 15px;
   right: 15px;
 }
@@ -2931,6 +2932,11 @@ header {
   background-color: #232323;
   border-top: 6px solid #FFF;
 }
+@media (max-width: 768px) {
+  .catalog-tabs__wrapper {
+    border-top: 4px solid #FFF;
+  }
+}
 .catalog-tabs {
   background-color: #FFF;
   border-left: 7px solid #FFF;
@@ -2940,6 +2946,18 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
   max-width: 1454px;
+}
+@media (max-width: 1200px) {
+  .catalog-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .catalog-tabs {
+    gap: 4px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 .catalog-tabs__item a {
   display: block;
@@ -2958,6 +2976,7 @@ header {
 }
 .catalog-tabs__item a img:first-of-type {
   display: block;
+  width: 100%;
 }
 .catalog-tabs__item a img:nth-of-type(2) {
   display: block;
@@ -2969,6 +2988,7 @@ header {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
+  width: 100%;
 }
 .catalog-tabs__item a > span {
   color: #969696;
@@ -2995,6 +3015,14 @@ header {
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
 }
+@media (max-width: 420px) {
+  .catalog-tabs__item a > span {
+    font-size: 20px;
+  }
+  .catalog-tabs__item a > span span {
+    font-size: 16px;
+  }
+}
 .catalog-tabs__item a:hover > span {
   color: #FFF;
 }
@@ -3020,6 +3048,11 @@ header {
 .catalog-tabs__item.active a svg {
   display: none;
 }
+@media (max-width: 768px) {
+  .catalog-tabs__item {
+    max-width: 420px;
+  }
+}
 .see-also-block {
   padding: 68px 15px 64px;
 }
@@ -3029,6 +3062,14 @@ header {
   font-weight: 600;
   margin-bottom: 68px;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .see-also-block {
+    padding: 40px 15px;
+  }
+  .see-also-block h2 {
+    margin-bottom: 40px;
+  }
 }
 .see-also-block__list {
   display: grid;
@@ -3051,6 +3092,15 @@ header {
 }
 .see-also-block__list li:hover .see-also-block__list-headline {
   color: #45959a;
+}
+@media (max-width: 768px) {
+  .see-also-block__list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .see-also-block__list li {
+    max-width: 420px;
+  }
 }
 .see-also-block__list-headline {
   color: #232323;
@@ -3087,6 +3137,14 @@ header {
   font-weight: 600;
   margin-bottom: 60px;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .drums-tune-comparison-block {
+    padding: 40px 0 60px;
+  }
+  .drums-tune-comparison-block .container h2 {
+    margin-bottom: 44px;
+  }
 }
 .drums-tune-comparison-block__list {
   display: grid;
@@ -3127,6 +3185,17 @@ header {
   transform: translateX(-50%);
   width: 1px;
 }
+@media (max-width: 992px) {
+  .drums-tune-comparison-block__list {
+    grid-template-columns: 1fr;
+  }
+  .drums-tune-comparison-block__list > li:nth-of-type(even) {
+    margin-left: 0;
+  }
+  .drums-tune-comparison-block__list::after {
+    display: none;
+  }
+}
 .drums-tune-comparison-block__notes-list {
   align-items: center;
   display: flex;
@@ -3147,6 +3216,11 @@ header {
   font-weight: 600;
   text-align: center;
   padding: 88px 15px;
+}
+@media (max-width: 576px) {
+  .steps-get-drums-block .container {
+    padding: 0;
+  }
 }
 .steps-get-drums-block__list {
   display: grid;
@@ -3191,4 +3265,52 @@ header {
   color: #FFF;
   font-size: 18px;
   font-weight: 600;
+}
+@media (max-width: 1200px) {
+  .steps-get-drums-block__list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .steps-get-drums-block__list li:nth-of-type(1),
+  .steps-get-drums-block__list li:nth-of-type(2) {
+    border-bottom: 1px solid #2f2f2f;
+  }
+  .steps-get-drums-block__list li:nth-of-type(3) {
+    border-left: 1px solid #2f2f2f;
+  }
+}
+@media (max-width: 576px) {
+  .steps-get-drums-block__list {
+    grid-template-columns: 1fr;
+  }
+  .steps-get-drums-block__list li {
+    background-color: #343434;
+    border: none;
+  }
+  .steps-get-drums-block__list li:nth-of-type(1),
+  .steps-get-drums-block__list li:nth-of-type(2),
+  .steps-get-drums-block__list li:nth-of-type(3) {
+    border: none;
+    border-bottom: 9px solid #232323;
+  }
+}
+.commercial-bunner {
+  position: relative;
+}
+.commercial-bunner img {
+  display: block;
+  height: 178px;
+  object-fit: cover;
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .commercial-bunner img {
+    height: auto;
+  }
+}
+.commercial-bunner a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
