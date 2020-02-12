@@ -3601,6 +3601,7 @@ header {
   border: 1px solid #232323;
   border-radius: 50px;
   display: flex;
+  min-width: 178px;
   justify-content: center;
   padding: 12px 0px;
   transition: all 0.4s ease-in-out;
@@ -4297,4 +4298,15 @@ header {
 }
 .add-your-comments-block__mail:focus {
   outline: none;
+}
+.product-page-block_common .product-page-block__info-main {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 62px;
+}
+@media (max-width: 576px) {
+  .product-page-block_common .product-page-block__info-main {
+    flex-direction: column;
+  }
 }

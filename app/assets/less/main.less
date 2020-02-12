@@ -4059,6 +4059,7 @@ header {
     border: 1px solid @black;
     border-radius: 50px;
     display: flex;
+    min-width: 178px;
     justify-content: center;
     padding: 12px 0px;
     .trans();
@@ -4880,4 +4881,22 @@ header {
     }
 }
 
+
+// Продукт общий
+
+.product-page-block_common {
+
+    .product-page-block__info-main {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 62px;
+    }
+
+    @media (max-width: 576px) {
+        .product-page-block__info-main {
+            flex-direction: column;
+        }
+    }
+}
 
