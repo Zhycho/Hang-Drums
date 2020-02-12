@@ -101,7 +101,6 @@ $(document).ready(function () {
     $('.js--product-page-block__slider-nav').slick({
         slidesToShow: 6,
         slidesToScroll: 1,
-        // rows: 2,
         asNavFor: '.js--product-page-block__slider-projector',
         dots: false,
         arrows: false,
@@ -111,6 +110,12 @@ $(document).ready(function () {
                 breakpoint: 1441,
                 settings: {
                     slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 577,
+                settings: {
+                    slidesToShow: 4,
                 }
             }
         ]
@@ -123,8 +128,28 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
-    // MMenu
+    // Табулятор в странице товаров
 
+    const tabLinks = document.querySelectorAll(".product-page-tabs-list-item a");
+    const tabPanels = document.querySelectorAll(".product-page-tabs-content");
+
+    for(let el of tabLinks) {
+        el.addEventListener("click", e => {
+            e.preventDefault();
+            
+            document.querySelector('.product-page-tabs-list-item.active').classList.remove("active");
+            document.querySelector('.product-page-tabs-content.active').classList.remove("active");
+            
+            const parentListItem = el.parentElement;
+            parentListItem.classList.add("active");
+            const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
+            
+            const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
+            panel[0].classList.add("active");
+        });
+    }
+
+    // MMenu
 
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [
