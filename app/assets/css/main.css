@@ -4396,3 +4396,156 @@ header {
     margin: 0 auto 40px;
   }
 }
+.blog-page-part {
+  padding: 40px 0 48px;
+}
+.blog-page__headline {
+  color: #232323;
+  font-size: 41px;
+  font-weight: 600;
+  margin: 0 auto 44px;
+  max-width: 1440px;
+  padding: 0 15px;
+  text-align: center;
+}
+.blog-page__list {
+  display: grid;
+  gap: 7px 6px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 992px) {
+  .blog-page__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .blog-page__list {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.blog-page__list-item {
+  box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .blog-page__list-item {
+    max-width: 400px;
+  }
+}
+.blog-page__list-item-img-wrapper {
+  position: relative;
+}
+.blog-page__list-item-img-wrapper img {
+  display: block;
+  width: 100%;
+}
+.blog-page__list-item-img-wrapper h2 {
+  bottom: 32px;
+  color: #FFF;
+  left: 32px;
+  position: absolute;
+  width: calc(100% - 64px);
+}
+@media (max-width: 480px) {
+  .blog-page__list-item-img-wrapper h2 {
+    bottom: 24px;
+    left: 24px;
+    width: calc(100% - 48px);
+  }
+}
+.blog-page__list-item-description {
+  padding: 36px 32px 120px;
+  position: relative;
+}
+.blog-page__list-item-description p {
+  color: #232323;
+  font-family: "FuturaPTBook";
+  margin-bottom: 16px;
+}
+@media (max-width: 480px) {
+  .blog-page__list-item-description {
+    padding: 28px 24px 100px;
+  }
+}
+.blog-page__list-item-link {
+  align-items: center;
+  background-color: #232323;
+  border: 1px solid #232323;
+  border-radius: 50px;
+  bottom: 40px;
+  color: #FFF;
+  display: flex;
+  font-size: 18px;
+  height: 56px;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transform: translateX(-50%);
+  width: 133px;
+}
+.blog-page__list-item-link:hover {
+  background-color: transparent;
+  color: #232323;
+}
+@media (max-width: 480px) {
+  .blog-page__list-item-link {
+    bottom: 32px;
+  }
+}
+.blog-page__break {
+  background-color: #232323;
+  padding: 32px 0;
+}
+.blog-page__break-headline {
+  color: #FFF;
+  font-family: "FuturaPTBook";
+  font-size: 30px;
+  font-weight: normal;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.blog-page__break-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.blog-page__break-list li {
+  margin: 0 24px;
+}
+.blog-page__break-list li a {
+  color: #f35905;
+  font-size: 18px;
+  font-family: "FuturaPTBook";
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.blog-page__break-list li a:hover {
+  color: #45959a;
+}
+.blog-page__load-more {
+  align-items: center;
+  background-color: #232323;
+  border: 1px solid #232323;
+  border-radius: 50px;
+  color: #FFF;
+  display: flex;
+  font-size: 18px;
+  height: 56px;
+  justify-content: center;
+  margin: 80px auto 0;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  width: 210px;
+}
+.blog-page__load-more:hover {
+  background-color: transparent;
+  color: #232323;
+}
