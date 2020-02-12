@@ -4334,6 +4334,10 @@ header {
     font-size: 14px;
     font-weight: 600;
     text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 
@@ -4897,6 +4901,105 @@ header {
         .product-page-block__info-main {
             flex-direction: column;
         }
+    }
+}
+
+// Продукт одежда
+
+.product-page-block_clothes {
+
+    .product-page-block__info-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 1200px) {
+        .product-page-block__info-main {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.product-page-block__info-main-clothes {
+    max-width: 200px;
+
+    li {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        span {
+            color: @black;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        div {
+            position: relative;
+
+            select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -ms-appearance: none;
+                appearance: none;
+                background-color: transparent;
+                border: 2px solid @black;
+                border-radius: 5px;
+                color: @black;
+                cursor: pointer;
+                font-family: "FuturaPT";
+                height: 29px;
+                min-width: 108px;
+                padding: 0 30px 0 10px;
+                position: relative;
+                .trans();
+
+                &:focus {
+                    outline: none
+                }
+
+                &:hover {
+                    border-color: @blue;
+                    color: @blue;
+                }
+            }
+
+            &::after {
+                background: transparent;
+                border-right: 2px solid @black;
+                border-top: 2px solid @black;
+                content: "";
+                height: 4px;
+                pointer-events: none;
+                position: absolute;
+                right: 8px;
+                top: 10px;
+                -webkit-transform: rotate(135deg);
+                -ms-transform: rotate(135deg);
+                transform: rotate(135deg);
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                width: 4px;
+                z-index: 2;
+            }
+
+            &:hover {
+
+                &::after {
+                    border-right: 2px solid @blue;
+                    border-top: 2px solid @blue;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1200px)  {
+        margin: 0 auto 40px;
     }
 }
 
