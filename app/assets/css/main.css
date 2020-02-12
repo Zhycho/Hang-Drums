@@ -4549,3 +4549,109 @@ header {
   background-color: transparent;
   color: #232323;
 }
+.typical-content {
+  margin: 0 auto;
+  max-width: 1130px;
+  padding: 0 15px;
+}
+.typical-content h1 {
+  color: #232323;
+  font-size: 41px;
+  font-weight: 600;
+  margin: 56px 0 68px;
+}
+.typical-content h2 {
+  color: #232323;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.typical-content h3 {
+  color: #232323;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.typical-content h4 {
+  color: #232323;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.typical-content h5,
+.typical-content h6 {
+  color: #232323;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.typical-content p {
+  color: #232323;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.typical-content a {
+  color: #c60d3a;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.typical-content a:hover {
+  text-decoration: none;
+}
+.typical-content ol {
+  counter-reset: olCounter;
+  margin-bottom: 24px;
+}
+.typical-content ol li {
+  font-size: 18px;
+  list-style: none;
+  margin-bottom: 4px;
+}
+.typical-content ol li::before {
+  color: #c60d3a;
+  content: counter(olCounter);
+  counter-increment: olCounter;
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 24px;
+}
+.typical-content ol li:last-of-type {
+  margin-bottom: 0;
+}
+.typical-content ul {
+  margin-bottom: 24px;
+}
+.typical-content ul li {
+  font-size: 18px;
+  list-style: none;
+  margin-bottom: 24px;
+}
+.typical-content ul li::before {
+  background-color: #c60d3a;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 8px;
+  margin-bottom: 2px;
+  margin-right: 24px;
+  width: 8px;
+}
+.typical-content ul li:last-of-type {
+  margin-bottom: 0;
+}
+.typical-content blockquote {
+  margin-bottom: 24px;
+  max-width: 680px;
+  padding-left: 36px;
+  position: relative;
+}
+.typical-content blockquote::before {
+  color: #c60d3a;
+  content: "❞";
+  font-size: 36px;
+  left: 0;
+  line-height: 36px;
+  position: absolute;
+  top: 0;
+}
