@@ -78,7 +78,6 @@ $(document).ready(function () {
     });
 
     // Слайдеры в товаре
-
     $('.js--product-page-block__slider-projector').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -121,6 +120,67 @@ $(document).ready(function () {
         ]
     });
 
+    // Типичный слайдер в article
+    $('.js--typical-slider__projector').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipe: true,
+        speed: 700,
+        fade: true,
+        prevArrow: $('.js--typical-slider__projector-nav-prev'),
+        nextArrow: $('.js--typical-slider__projector-nav-next'),
+        asNavFor: '.js--typical-slider-nav',
+        responsive: [
+            {
+                breakpoint: 661,
+                settings: {
+                    swipe: true
+                }
+            }
+        ]
+    });
+
+    $('.js--typical-slider-nav').slick({
+        slidesToShow: 11,
+        slidesToScroll: 1,
+        asNavFor: '.js--typical-slider__projector',
+        dots: false,
+        arrows: false,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 1441,
+                settings: {
+                    slidesToShow: 10,
+                }
+            },
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 8,
+                }
+            },
+            {
+                breakpoint: 841,
+                settings: {
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 440,
+                settings: {
+                    slidesToShow: 4,
+                }
+            }
+        ]
+    });
+
 
     // faq-block 
     $(document).on('click','.faq-block-list__item a',function(){
@@ -129,7 +189,6 @@ $(document).ready(function () {
     });
 
     // Табулятор в странице товаров
-
     const tabLinks = document.querySelectorAll(".product-page-tabs-list-item a");
     const tabPanels = document.querySelectorAll(".product-page-tabs-content");
 
@@ -150,7 +209,6 @@ $(document).ready(function () {
     }
 
     // MMenu
-
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [
             {
