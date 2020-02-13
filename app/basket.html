@@ -125,194 +125,329 @@
         </nav>
     </header>
     <main>
-        <article class="commercial-bunner">
-            <picture>
-                <source srcset="assets/img/christmas-sale_mobile.png" media="(max-width: 768px)">
-                <source srcset="assets/img/christmas-sale.png" media="(max-width: 1400px)">
-                <img src="assets/img/christmas-sale.png" alt="Чёрная пятница">
-            </picture>
-            <a href="#" id=""></a>
-        </article>
-
-        <div class="blog-page-part">
-            <h1 class="blog-page__headline">Blog</h1>
-            <ul class="blog-page__list container">
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-            </ul>
+        <div class="basket-container">
+            <h1 class="basket-headline">Cart</h1>
+            <span class="basket-part">1) Check your order</span>
+            <table class="basket-table">
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="basket-table__name">
+                            <img src="assets/img/product_05.png" alt="">
+                            <span>RAV Pan D Celtic Minor</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="basket-table__item-counter-wrapper">
+                            <a href="#" class="basket-table__item-counter-less">-</a>
+                            <input type="text" name="" id="" value="1" readonly>
+                            <a href="#" class="basket-table__item-counter-more">+</a>
+                        </div>
+                    </td>
+                    <td>1250 &#36;</td>
+                    <td>125 &#36;</td>
+                    <td>125 000 &#36;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="basket-table__name">
+                            <img src="assets/img/product_05.png" alt="">
+                            <span>RAV Pan D Celtic Minor</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="basket-table__item-counter-wrapper">
+                            <a href="#" class="basket-table__item-counter-less">-</a>
+                            <input type="text" name="" id="" value="1" readonly>
+                            <a href="#" class="basket-table__item-counter-more">+</a>
+                        </div>
+                    </td>
+                    <td>1250 &#36;</td>
+                    <td>125 &#36;</td>
+                    <td>125 000 &#36;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="basket-table__name">
+                            <img src="assets/img/product_05.png" alt="">
+                            <span>RAV Pan D Celtic Minor</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="basket-table__item-counter-wrapper">
+                            <a href="#" class="basket-table__item-counter-less">-</a>
+                            <input type="text" name="" id="" value="123" readonly>
+                            <a href="#" class="basket-table__item-counter-more">+</a>
+                        </div>
+                    </td>
+                    <td>1250 &#36;</td>
+                    <td>125 &#36;</td>
+                    <td>125 000 &#36;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="basket-table__name">
+                            <img src="assets/img/product_05.png" alt="">
+                            <span>RAV Pan D Celtic Minor</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="basket-table__item-counter-wrapper">
+                            <a href="#" class="basket-table__item-counter-less">-</a>
+                            <input type="text" name="" id="" value="1" readonly>
+                            <a href="#" class="basket-table__item-counter-more">+</a>
+                        </div>
+                    </td>
+                    <td>1250 &#36;</td>
+                    <td>125 &#36;</td>
+                    <td>125 000 &#36;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="basket-table__name">
+                            <img src="assets/img/product_05.png" alt="">
+                            <span>RAV Pan D Celtic Minor</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="basket-table__item-counter-wrapper">
+                            <a href="#" class="basket-table__item-counter-less">-</a>
+                            <input type="text" name="" id="" value="10" readonly>
+                            <a href="#" class="basket-table__item-counter-more">+</a>
+                        </div>
+                    </td>
+                    <td>1250 &#36;</td>
+                    <td>125 &#36;</td>
+                    <td>125 000 &#36;</td>
+                </tr>
+            </table>
         </div>
 
-        <div class="blog-page__break">
+        <div class="accessories-block accessories-block_basket">
             <div class="container">
-                <h3 class="blog-page__break-headline">Visit our Store</h3>
-                <ul class="blog-page__break-list">
-                    <li>
-                        <a href="#">#Drums enhancment tools</a>
+                <h2 class="accessories-block_basket__headline">Accessories for Rav Drums</h2>
+                <p class="accessories-block_basket__description">Get a bargain at completing chekout with the set of 4 and get 4% discount. Set must include Drum, Case, Mallets and one more product, e.g. T-Shirt.</p>
+                <ul class="products-block-list">
+                    <li class="products-block-list__item">
+                        <span class="products-block-list__item-label products-block-list__item-label_best-seller">Best seller</span>
+                        <a href="product.html" class="products-block-list__item-img">
+                            <img src="assets/img/product_03.png" alt="">
+                            <img src="assets/img/product_01.png" alt="">
+                        </a>
+                        <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                        <div class="products-block-list__item-main">
+                            <span class="products-block-list__item-status">In Stock</span>
+                            <div class="products-block-list__item-price">
+                                <span class="products-block-list__item-price-old">1250 USD</span>
+                                <span class="products-block-list__item-price-actual">1250 USD</span>
+                            </div>
+                        </div>
+                        <div class="products-block-list__item-bottom">
+                            <a href="#" class="products-block-list__item-reviews">
+                                <span>Reviews</span>
+                                <span>111</span>
+                            </a>
+                            <a href="product.html" class="products-block-list__item-learn-more">Learn more</a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#">#Original cases for Rav Vast</a>
+                    <li class="products-block-list__item">
+                        <span class="products-block-list__item-label products-block-list__item-label_new">New</span>
+                        <a href="product.html" class="products-block-list__item-img">
+                            <img src="assets/img/product_03.png" alt="">
+                            <img src="assets/img/product_01.png" alt="">
+                        </a>
+                        <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                        <div class="products-block-list__item-main">
+                            <span class="products-block-list__item-status">In Stock</span>
+                            <div class="products-block-list__item-price">
+                                <span class="products-block-list__item-price-old">1250 USD</span>
+                                <span class="products-block-list__item-price-actual">1250 USD</span>
+                            </div>
+                        </div>
+                        <div class="products-block-list__item-bottom">
+                            <a href="#" class="products-block-list__item-reviews">
+                                <span>Reviews</span>
+                                <span>111</span>
+                            </a>
+                            <a href="product.html" class="products-block-list__item-learn-more">Learn more</a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#">#Cases for Rav Vast by Attic Bags</a>
+                    <li class="products-block-list__item">
+                        <a href="product.html" class="products-block-list__item-img">
+                            <img src="assets/img/product_03.png" alt="">
+                            <img src="assets/img/product_01.png" alt="">
+                        </a>
+                        <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                        <div class="products-block-list__item-main">
+                            <span class="products-block-list__item-status">In Stock</span>
+                            <div class="products-block-list__item-price">
+                                <span class="products-block-list__item-price-old">1250 USD</span>
+                                <span class="products-block-list__item-price-actual">1250 USD</span>
+                            </div>
+                        </div>
+                        <div class="products-block-list__item-bottom">
+                            <a href="#" class="products-block-list__item-reviews">
+                                <span>Reviews</span>
+                                <span>111</span>
+                            </a>
+                            <a href="product.html" class="products-block-list__item-learn-more">Learn more</a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#">#T-Shirts by Hang Drums</a>
+                    <li class="products-block-list__item">
+                        <span class="products-block-list__item-label products-block-list__item-label_popular">Popular</span>
+                        <a href="product.html" class="products-block-list__item-img">
+                            <img src="assets/img/product_03.png" alt="">
+                            <img src="assets/img/product_01.png" alt="">
+                        </a>
+                        <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                        <div class="products-block-list__item-main">
+                            <span class="products-block-list__item-status">In Stock</span>
+                            <div class="products-block-list__item-price">
+                                <span class="products-block-list__item-price-old">1250 USD</span>
+                                <span class="products-block-list__item-price-actual">1250 USD</span>
+                            </div>
+                        </div>
+                        <div class="products-block-list__item-bottom">
+                            <a href="#" class="products-block-list__item-reviews">
+                                <span>Reviews</span>
+                                <span>111</span>
+                            </a>
+                            <a href="product.html" class="products-block-list__item-learn-more">Learn more</a>
+                        </div>
                     </li>
-                    <li>
-                        <a href="#">#Bracelets and Popsockets</a>
+                    <li class="products-block-list__item">
+                        <a href="product.html" class="products-block-list__item-img">
+                            <img src="assets/img/product_03.png" alt="">
+                            <img src="assets/img/product_01.png" alt="">
+                        </a>
+                        <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                        <div class="products-block-list__item-main">
+                            <span class="products-block-list__item-status">In Stock</span>
+                            <div class="products-block-list__item-price">
+                                <span class="products-block-list__item-price-old">1250 USD</span>
+                                <span class="products-block-list__item-price-actual">1250 USD</span>
+                            </div>
+                        </div>
+                        <div class="products-block-list__item-bottom">
+                            <a href="#" class="products-block-list__item-reviews">
+                                <span>Reviews</span>
+                                <span>111</span>
+                            </a>
+                            <a href="product.html" class="products-block-list__item-learn-more">Learn more</a>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="blog-page-part">
-            <ul class="blog-page__list container">
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
+        
+        <form action="">
+            
+                <fieldset class="form-delivery-details">
+                    <div class="basket-container">
+                        <span class="basket-part">2) Check your delivery details</span>
+                        <div>
+                            <input type="text" name="" id="" placeholder="Name*" required>
+                            <input type="text" name="" id="" placeholder="Surname*" required>
+                            <input type="email" name="" id="" placeholder="E-mail*" required>
+                            <input type="tel" name="" id="" placeholder="Phone*" required>
+                            <div class="form-delivery-details__select-country">
+                                <span>Select your country from the list:</span>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">United Arab Emirates</option>
+                                        <option value="">USA</option>
+                                        <option value="">Russia</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-delivery-details__select-delivery">
+                                <span>Choose your shipping method:</span>
+                                <ul class="form-delivery-details__select-delivery-list">
+                                    <li>
+                                        <label for="form-delivery-details_01">
+                                            <input type="radio" name="form-delivery-details" id="form-delivery-details_01">
+                                            <div></div>
+                                            <span>EMS</span>
+                                            <span>Price: 64&#36;</span>
+                                            <span>Delivery time: 10-21 days</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="form-delivery-details_02">
+                                            <input type="radio" name="form-delivery-details" id="form-delivery-details_02" checked>
+                                            <div></div>
+                                            <span>DHL</span>
+                                            <span>Price: 151&#36;</span>
+                                            <span>Delivery time: up to 5 days</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
+                </fieldset>
+                <fieldset class="form-payment-details">
+                    <div class="basket-container">
+                        <span class="basket-part">3) Payment</span>
+                        <div>
+                            <div>
+                                <div class="form-payment-details__coupon-wrapper">
+                                    <label class="form-payment-details__label" for="form-coupon">Enter coupon code:</label>
+                                    <div class="form-payment-details__coupon">
+                                        <input type="text" name="" id="form-coupon">
+                                        <a href="javascript:;"></a>
+                                    </div>
+                                </div>
+                                <ul class="form-payment-details__prices">
+                                    <li>
+                                        <span>Price:</span>
+                                        <span>1250 &#36;</span>
+                                    </li>
+                                    <li>
+                                        <span>Delivery:</span>
+                                        <span>0 &#36;<span class="form-payment-details__price-old">120 &#36;</span></span>
+                                    </li>
+                                    <li>
+                                        <span>Total:</span>
+                                        <span>1250 &#36;</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="form-payment-details__type-of-payment">
+                                    <label class="form-payment-details__label" for="">Select type of payment:</label>
+                                    <ul class="form-payment-details__type-of-payment-list">
+                                        <li>
+                                            <label for="form-payment-details_01">
+                                                <input type="radio" name="form-payment-details" id="form-payment-details_01">
+                                                <div></div>
+                                                <span>Paypal Individual</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label for="form-payment-details_02">
+                                                <input type="radio" name="form-payment-details" id="form-payment-details_02" checked>
+                                                <div></div>
+                                                <span>Paypal Business</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <input class="form-payment__submit" type="submit" value="Checkout">
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-                <li class="blog-page__list-item">
-                    <div class="blog-page__list-item-img-wrapper">
-                        <img src="assets/img/blog_01.png" alt="">
-                        <h2>Creation of RAV Drum — history, manufacturing, and tuning</h2>
-                    </div>
-                    <div class="blog-page__list-item-description">
-                        <p>Made by Andrey Remyannikov in Russia. Since 2013.</p>
-                        <p>More than 2,500 people in 45 countries have RAV Drums, some of them are famous musicians.</p>
-                        <p>The RAV Vast Drum takes everybody by surprise. It is a discovery to everyone who finds it. It has a meditative, hypnotic and tranquil sound.</p>
-                        <a class="blog-page__list-item-link" href="article.html">Read</a>
-                    </div>
-                </li>
-            </ul>
-            <a href="javascript:;" class="blog-page__load-more">Load more</a>
-        </div>
-
+                </fieldset>
+            
+        </form>
+        
 
 
 
