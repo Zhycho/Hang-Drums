@@ -4712,6 +4712,11 @@ header {
   max-width: 1250px;
   padding: 0 15px;
 }
+@media (max-width: 768px) {
+  .basket-container {
+    text-align: center;
+  }
+}
 .basket-headline {
   color: #232323;
   font-size: 41px;
@@ -4728,6 +4733,16 @@ header {
   font-weight: 900;
   margin-bottom: 48px;
   padding: 6px 24px;
+}
+@media (max-width: 768px) {
+  .basket-part {
+    margin: 0 auto 32px;
+  }
+}
+@media (max-width: 420px) {
+  .basket-part {
+    padding: 6px 22px;
+  }
 }
 .basket-table {
   box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.2);
@@ -4783,6 +4798,16 @@ header {
 .basket-table tr td:nth-of-type(4),
 .basket-table tr td:nth-of-type(5) {
   width: 12.5%;
+}
+.basket-table tr td:nth-of-type(3),
+.basket-table tr td:nth-of-type(4),
+.basket-table tr td:nth-of-type(5) {
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .basket-table {
+    display: none;
+  }
 }
 .basket-table__name {
   align-items: center;
@@ -4850,6 +4875,22 @@ header {
   background-color: #f8f8f8;
   padding: 80px 0 100px;
 }
+@media (max-width: 992px) {
+  .accessories-block_basket > .container {
+    background-color: #f8f8f8;
+    padding-bottom: 0;
+  }
+  .accessories-block_basket > .container h2 {
+    color: #232323;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 768px) {
+  .accessories-block_basket {
+    padding: 40px 0;
+  }
+}
 .accessories-block_basket__headline {
   color: #232323;
   font-size: 41px;
@@ -4888,6 +4929,18 @@ header {
 }
 .form-delivery-details .basket-container > div > input::placeholder {
   color: #232323;
+}
+@media (max-width: 768px) {
+  .form-delivery-details {
+    padding: 40px 0;
+  }
+  .form-delivery-details .basket-container {
+    text-align: center;
+  }
+  .form-delivery-details .basket-container > div {
+    grid-template-columns: 1fr;
+    text-align: start;
+  }
 }
 .form-delivery-details__select-country {
   position: relative;
@@ -4966,6 +5019,11 @@ header {
   padding-top: 8px;
   position: relative;
 }
+@media (max-width: 420px) {
+  .form-delivery-details__select-delivery-list li label {
+    padding-left: 24px;
+  }
+}
 .form-delivery-details__select-delivery-list li label input {
   left: 0;
   opacity: 0;
@@ -5014,6 +5072,11 @@ header {
   font-size: 14px;
   font-weight: 600;
 }
+@media (max-width: 576px) {
+  .form-delivery-details__select-delivery-list {
+    justify-content: space-between;
+  }
+}
 .form-payment-details {
   background-color: #f8f8f8;
   border: none;
@@ -5023,6 +5086,24 @@ header {
   display: grid;
   gap: 34px 30px;
   grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 768px) {
+  .form-payment-details .basket-container > div {
+    gap: 48px 30px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: start;
+  }
+}
+@media (max-width: 768px) {
+  .form-payment-details {
+    padding: 40px 0;
+  }
+}
+@media (max-width: 405px) {
+  .form-payment-details .basket-container > div > div {
+    width: 100%;
+  }
 }
 .form-payment-details__label {
   color: #232323;
@@ -5048,6 +5129,11 @@ header {
 }
 .form-payment-details__coupon input:focus {
   outline: none;
+}
+@media (max-width: 405px) {
+  .form-payment-details__coupon input {
+    width: 100%;
+  }
 }
 .form-payment-details__coupon a {
   background-color: #232323;
@@ -5106,6 +5192,12 @@ header {
   font-size: 18px;
   font-weight: 700;
 }
+@media (max-width: 768px) {
+  .form-payment-details__prices li {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .form-payment-details__price-old {
   color: #c5c5c5;
   font-size: 18px;
@@ -5115,6 +5207,16 @@ header {
 }
 .form-payment-details__type-of-payment .form-payment-details__label {
   margin-bottom: 28px;
+}
+@media (max-width: 768px) {
+  .form-payment-details__type-of-payment {
+    width: 375px;
+  }
+}
+@media (max-width: 405px) {
+  .form-payment-details__type-of-payment {
+    width: 100%;
+  }
 }
 .form-payment-details__type-of-payment-list li {
   margin-bottom: 28px;
@@ -5186,4 +5288,10 @@ header {
 .form-payment__submit:hover {
   background-color: #FFF;
   color: #232323;
+}
+@media (max-width: 768px) {
+  .form-payment__submit {
+    display: block;
+    margin: 0 auto;
+  }
 }
