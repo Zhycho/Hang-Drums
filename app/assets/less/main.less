@@ -5414,6 +5414,15 @@ header {
     @media (max-width: 768px) {
         margin-right: 20px;
     }
+
+    &.basket-headline_not-products {
+        margin: 40px 0;
+        text-align: start;
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+    }
 }
 
 .basket-part {
@@ -6037,7 +6046,11 @@ header {
 }
 
 .basket-table-mobile {
+    display: none;
 
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
 
 .basket-table-mobile__item {
@@ -6180,3 +6193,233 @@ header {
     min-height: 44px;
     width: 100%;
 }
+
+// корзина - различные состояния
+
+.basket-something-happened-block {
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.05);
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 68px;
+    padding: 24px 24px 40px;
+}
+
+.basket-something-happened-block__icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    fill: #FFF;
+    flex-direction: column;
+    height: 64px;
+    position: relative;
+    width: 80px;
+
+    &::before {
+        background-color: @blue;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 64px;
+        position: absolute;
+        left: 4px;
+        top: 0;
+        transform: rotate(-35deg);
+        width: 44px;
+        z-index: 1;
+    }
+
+    &::after {
+        background-color: @orange;
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 64px;
+        position: absolute;
+        transform: rotate(-35deg);
+        right: 4px;
+        top: 0;
+        width: 44px;
+    }
+
+    svg {
+        position: relative;
+        z-index: 5;
+    }
+
+    &.basket-something-happened-block__icon_success {
+
+        svg:first-of-type {
+            left: 4px;
+        }
+    }
+
+    &.basket-something-happened-block__icon_empty {
+
+        span {
+            bottom: 2px;
+            color: #FFF;
+            font-size: 24px;
+            left: 3px;
+            line-height: 16px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &.basket-something-happened-block__icon_error {
+
+        svg:first-of-type {
+            bottom: 3px;
+            left: 3px;
+        }
+    }
+}
+
+.basket-something-happened-block__text {
+    color: @black;
+    font-size: 24px;
+    max-width: 480px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+}
+
+.basket-error-methods {
+
+}
+
+.basket-error-methods__item {
+    border-bottom: 1px solid #e8e8e8;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    padding: 56px 0;
+
+    @media (max-width: 992px) {
+        gap: 24px;
+        grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 768px) {
+        padding: 40px 0;
+    }
+
+    &:first-of-type {
+        padding-top: 0;
+    }
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+}
+
+.basket-error-methods__item-headline {
+    color: @black;
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.basket-error-methods__item-text {
+    color: @black;
+    margin-bottom: 24px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    a {
+        .trans(.3s);
+
+        &:hover {
+            color: @blue;
+        }
+    }
+}
+
+.basket-error-methods__item-img {
+    display: block;
+    margin: 0 0 0 auto;
+    max-width: 100%;
+
+    @media (max-width: 992px) {
+        margin: 0 auto;
+    }
+}
+
+.basket-error-methods__item-mail {
+    color: @black;
+    font-size: 24px;
+    font-weight: 700;
+    .trans(.3s);
+
+    &:hover {
+        color: @blue;
+    }
+}
+
+.basket-error-methods__form {
+    
+    input:not([type="submit"]) {
+        border: 1px solid #d3d3d3;
+        border-radius: 3px;
+        color: @black;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        height: 53px;
+        margin-bottom: 27px;
+        padding: 0 28px;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: @black;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @black;
+        border: 1px solid @black;
+        border-radius: 50px;
+        color: #FFF;
+        cursor: pointer;
+        display: block;
+        font-size: 18px;
+        height: 57px;
+        .trans();
+        width: 154px;
+
+        &:hover {
+            background-color: #FFF;
+            color: @black;
+        }
+
+        @media (max-width: 576px) {
+            margin: 0 auto;
+        }
+    }
+}
+
+.basket-something-happened-block_error {
+
+    @media (max-width: 576px) {
+        margin-bottom: 40px;
+        padding: 24px;
+    }
+}
+
