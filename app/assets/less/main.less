@@ -6423,3 +6423,68 @@ header {
     }
 }
 
+
+// 404
+
+.container-404 {
+    margin: 0 auto;
+    max-width: 530px;
+    padding: 80px 15px;
+
+    @media (max-width: 480px) {
+        padding: 52px 15px;
+    }
+}
+
+.page-404 {
+    
+    img {
+        display: block;
+        margin: 0 auto 24px;
+
+        @media (max-width: 480px) {
+            width: 200px;
+        }
+    }
+
+    span {
+        color: @black;
+        display: block;
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    p {
+        color: @black;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 40px;
+
+        li {
+            margin-bottom: 4px;
+
+            a {
+                color: gray;
+                font-size: 18px;
+                margin: 0 9px;
+                padding: 4px 0;
+                text-decoration: underline;
+                
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+

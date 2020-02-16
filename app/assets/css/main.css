@@ -5681,3 +5681,56 @@ header {
     padding: 24px;
   }
 }
+.container-404 {
+  margin: 0 auto;
+  max-width: 530px;
+  padding: 80px 15px;
+}
+@media (max-width: 480px) {
+  .container-404 {
+    padding: 52px 15px;
+  }
+}
+.page-404 img {
+  display: block;
+  margin: 0 auto 24px;
+}
+@media (max-width: 480px) {
+  .page-404 img {
+    width: 200px;
+  }
+}
+.page-404 span {
+  color: #232323;
+  display: block;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.page-404 p {
+  color: #232323;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.page-404 ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+.page-404 ul li {
+  margin-bottom: 4px;
+}
+.page-404 ul li a {
+  color: gray;
+  font-size: 18px;
+  margin: 0 9px;
+  padding: 4px 0;
+  text-decoration: underline;
+}
+.page-404 ul li a:hover {
+  text-decoration: none;
+}
