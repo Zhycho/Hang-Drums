@@ -188,6 +188,32 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
+    // Каунтеры
+
+    function plusCounter(element){
+        let input = $(element).closest('.basket-table__item-counter-wrapper').find('input[name="count"]');
+        input.val(parseInt(input.val())+1);
+        input.change();
+    }
+
+    function minusCounter(element){
+        let input = $(element).closest('.basket-table__item-counter-wrapper').find('input[name="count"]');
+        if (parseInt(input.val()) > 1){
+            input.val(parseInt(input.val())-1);
+            input.change();
+        }
+    }
+    
+    $(document).on('click','.basket-table__item-counter-more',function(){
+        plusCounter(this);
+        return false;
+    });
+    
+    $(document).on('click','.basket-table__item-counter-less',function(){
+        minusCounter(this);
+        return false;
+    });
+
     // Табулятор в странице товаров
     const tabLinks = document.querySelectorAll(".product-page-tabs-list-item a");
     const tabPanels = document.querySelectorAll(".product-page-tabs-content");
@@ -208,7 +234,49 @@ $(document).ready(function () {
         });
     }
 
-    // Принять куки
+    // Табы с якорями в продукте
+
+    const tabTopLinks = document.querySelectorAll(".product-page-block__info-bottom-hashtags li a");
+
+    for(let el of tabTopLinks) {
+        el.addEventListener("click", e => {
+            e.preventDefault();
+
+            document.querySelector('.product-page-tabs-list-item.active').classList.remove("active");
+            document.querySelector('.product-page-tabs-content.active').classList.remove("active");
+
+            
+
+
+            // const tabs = [...tabLinks].filter(el => el.getAttribute("data-number") == index);
+            // tabs[0].classList.add("active");
+            
+            const parentListItem = el.parentElement;
+            const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
+            
+            const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
+            panel[0].classList.add("active");
+        });
+    }
+
+    $(function(){
+        $('a[href^="#"]').on('click', function(event) {
+            event.preventDefault();
+            
+            const productTabSoughtFor = $(this).attr("href"),
+                productTabPosition = $(productTabSoughtFor).offset().top;
+
+            // for (let i = 0; i < tabLinks.length; i++) {
+            //     if (tabLinks[i].getAttribute(id) == $(this).attr("href")) {
+            //         tabLinks.classList.add("active");
+            //     }
+            // }
+            
+            $('html, body').animate({scrollTop: productTabPosition}, 1000);
+        });
+    });
+
+    // Куки
     setTimeout(function() {
         $(".cookies").fadeIn('fast');
     }, 2000)
@@ -216,7 +284,6 @@ $(document).ready(function () {
     $(document).on('click', '.js--cookies-accept', function(){
         $(".cookies").hide();
     })
-
 
 
     // MMenu

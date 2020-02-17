@@ -5691,6 +5691,7 @@ header {
             font-size: 14px;
             font-weight: 600;
             padding: 0 24px;
+            .trans(.3s);
 
             &:focus {
                 outline: none;
@@ -5698,6 +5699,10 @@ header {
 
             &::placeholder {
                 color: @black;
+            }
+
+            &:invalid:not(:focus):not(:placeholder-shown) {
+                border: 1px solid @red;
             }
         }
     }

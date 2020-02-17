@@ -5038,12 +5038,19 @@ header {
   font-size: 14px;
   font-weight: 600;
   padding: 0 24px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 .form-delivery-details .basket-container > div > input:focus {
   outline: none;
 }
 .form-delivery-details .basket-container > div > input::placeholder {
   color: #232323;
+}
+.form-delivery-details .basket-container > div > input:invalid:not(:focus):not(:placeholder-shown) {
+  border: 1px solid #c60d3a;
 }
 @media (max-width: 768px) {
   .form-delivery-details {
