@@ -208,6 +208,17 @@ $(document).ready(function () {
         });
     }
 
+    // Принять куки
+    setTimeout(function() {
+        $(".cookies").fadeIn('fast');
+    }, 2000)
+
+    $(document).on('click', '.js--cookies-accept', function(){
+        $(".cookies").hide();
+    })
+
+
+
     // MMenu
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [

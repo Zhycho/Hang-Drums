@@ -598,10 +598,6 @@ header {
     display: flex;
     justify-content: flex-end;
 
-    &:hover .header-basket__link svg {
-        fill: @orange;
-    }
-
     &:hover .header-basket__price span:nth-of-type(2) {
         color: @orange;
     }
@@ -936,7 +932,7 @@ header {
             height: 56px;
             line-height: 56px;
             text-align: center;
-            .trans();
+            .trans(.3s);
             width: 210px;
 
             &:hover {
@@ -1033,7 +1029,7 @@ header {
     fill: #FFF;
     height: 37px;
     justify-content: center;
-    .trans();
+    .trans(.3s);
     width: 37px;
 
     &:hover {
@@ -1051,7 +1047,7 @@ header {
     height: 37px;
     justify-content: center;
     margin-left: 9px;
-    .trans();
+    .trans(.3s);
     width: 37px;
 
     &:hover {
@@ -1481,7 +1477,7 @@ header {
     line-height: 56px;
     margin: 0 auto;
     text-align: center;
-    .trans();
+    .trans(.3s);
     width: 210px;
 
     &:hover {
@@ -1589,6 +1585,11 @@ header {
     box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.2);
     padding: 24px 18px 24px 24px;
     position: relative;
+    .trans(.3s);
+
+    &:hover {
+        box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.2);
+    }
 }
 
 .products-block-list__item-label {
@@ -1813,7 +1814,7 @@ header {
         height: 24px;
         line-height: 24px;
         padding: 0 12px;
-        .trans();
+        .trans(.3s);
     }
 
     &:hover span:nth-of-type(2) {
@@ -1831,7 +1832,7 @@ header {
     height: 37px;
     line-height: 37px;
     text-align: center;
-    .trans();
+    .trans(.3s);
     width: 104px;
 
     &:hover {
@@ -1851,7 +1852,7 @@ header {
     line-height: 56px;
     margin: 0 auto;
     text-align: center;
-    .trans();
+    .trans(.3s);
     width: 133px;
 
     &:hover {
@@ -1943,6 +1944,7 @@ header {
             right: 15px;
             top: 50%;
             transform: translateY(-50%);
+            .trans(.3s);
 
             &:hover {
                 background-color: #FFF;
@@ -2085,7 +2087,7 @@ header {
     .trans();
 
     &:hover {
-        fill: @blue;
+        fill: @red;
     }
 }
 
@@ -2144,7 +2146,7 @@ header {
         top: 0;
         text-align: center;
         width: 133px;
-        .trans();
+        .trans(.3s);
 
         &:hover {
             background-color: transparent;
@@ -2975,10 +2977,10 @@ header {
             background-color: #232323;
             content: "";
             display: block;
-            height: 29px;
+            height: 2px;
             left: calc(100% - 15px);
             position: absolute;
-            top: 0;
+            bottom: 0;
             width: 100vw;
 
             @media (max-width: 992px) {
@@ -3242,8 +3244,16 @@ header {
     }
 }
 
+
+
 .cookies {
     background-color: @blue;
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 
     .container {
         align-items: center;
@@ -3267,7 +3277,7 @@ header {
             justify-content: center;
             margin-left: 44px;
             min-width: 134px;
-            .trans();
+            .trans(.3s);
             width: 134px;
 
             &:hover {
@@ -3291,6 +3301,18 @@ header {
 
             a {
                 margin-left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .container {
+            padding: 16px 24px;
+
+            a {
+                height: 40px;
+                font-size: 16px;
             }
         }
     }
@@ -3470,6 +3492,7 @@ header {
 
     li {
         position: relative;
+        .trans(.3s);
 
         img {
             display: block;
@@ -3484,8 +3507,12 @@ header {
             width: 100%;
         }
 
-        &:hover .see-also-block__list-headline {
-            color: @blue;
+        &:hover {
+            box-shadow: 0px 0px 0px 1px gray;
+
+            .see-also-block__list-headline {
+                color: @blue;
+            }
         }
     }
 
@@ -3569,7 +3596,7 @@ header {
             white-space: nowrap;
             height: 32px;
             padding: 5px 12px;
-            .trans();
+            .trans(.3s);
 
             &:hover {
                 background-color: @blue;
@@ -3863,10 +3890,10 @@ header {
 
     .default__slider-nav-prev, .default__slider-nav-next {
         background-color: rgba(0, 0, 0, 0.1);
-        fill: #e1e1e1;
+        fill: @blue;
 
         &:hover {
-            fill: @blue;
+            fill: @red;
         }
     }
 }
@@ -4068,7 +4095,7 @@ header {
     min-width: 178px;
     justify-content: center;
     padding: 12px 0px;
-    .trans();
+    .trans(.3s);
     width: 178px;
 
     svg {
@@ -5062,12 +5089,29 @@ header {
         color: #FFF;
         left: 32px;
         position: absolute;
+        .trans();
         width: calc(100% - 64px);
 
         @media (max-width: 480px) {
             bottom: 24px;
             left: 24px;
             width: calc(100% - 48px);
+        }
+    }
+
+    a {
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &:hover {
+
+        h2 {
+            color: @blue;
         }
     }
 }
@@ -5100,7 +5144,7 @@ header {
     justify-content: center;
     left: 50%;
     position: absolute;
-    .trans();
+    .trans(.3s);
     transform: translateX(-50%);
     width: 133px;
 
@@ -5160,7 +5204,7 @@ header {
     height: 56px;
     justify-content: center;
     margin: 80px auto 0;
-    .trans();
+    .trans(.3s);
     width: 210px;
 
     &:hover {
@@ -5516,18 +5560,31 @@ header {
     align-items: center;
     display: flex;
 
-    img {
-        display: block;
-        height: 82px;
-        margin-right: 20px;
-        object-fit: cover;
-        width: 82px;
-    }
+    a {
+        align-items: center;
+        display: flex;
 
-    span {
-        color: @black;
-        font-size: 18px;
-        font-weight: 900;
+        img {
+            display: block;
+            height: 82px;
+            margin-right: 20px;
+            object-fit: cover;
+            width: 82px;
+        }
+    
+        span {
+            color: @black;
+            font-size: 18px;
+            font-weight: 900;
+            .trans();
+        }
+
+        &:hover {
+
+            span {
+                color: @blue;
+            }
+        }
     }
 }
 
@@ -6039,6 +6096,10 @@ header {
         color: @black;
     }
 
+    &:focus {
+        outline: none;
+    }
+
     @media (max-width: 768px) {
         display: block;
         margin: 0 auto;
@@ -6072,6 +6133,18 @@ header {
     align-items: center;
     display: flex;
     padding: 14px;
+
+    a {
+        align-items: center;
+        display: flex;
+
+        &:hover {
+
+            .basket-table-mobile__item-name {
+                color: @blue;
+            }
+        }
+    }
 }
 
 .basket-table-mobile__item-number {
@@ -6095,6 +6168,10 @@ header {
     margin-right: 22px;
     object-fit: cover;
     width: 82px;
+
+    @media (max-width: 480px) {
+        margin-right: 12px;
+    }
 }
 
 .basket-table-mobile__item-name {
@@ -6102,6 +6179,7 @@ header {
     display: flex;
     font-size: 18px;
     font-weight: 900;
+    .trans();
 }
 
 .basket-table-mobile__item-counters {
@@ -6604,7 +6682,7 @@ header {
             font-size: 18px;
             height: 54px;
             justify-content: center;
-            .trans();
+            .trans(.3s);
             width: 132px;
         }
 
@@ -6682,8 +6760,12 @@ header {
         font-size: 18px;
         height: 54px;
         justify-content: center;
-        .trans();
+        .trans(.3s);
         width: 132px;
+
+        &:focus {
+            outline: none;
+        }
 
         &:hover {
             background-color: #FFF;
