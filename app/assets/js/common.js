@@ -238,7 +238,7 @@ $(document).ready(function () {
 
     const tabTopLinks = document.querySelectorAll(".product-page-block__info-bottom-hashtags li a");
 
-    for(let el of tabTopLinks) {
+    for (let el of tabTopLinks) {
         el.addEventListener("click", e => {
             e.preventDefault();
 
@@ -248,31 +248,26 @@ $(document).ready(function () {
             
 
 
-            // const tabs = [...tabLinks].filter(el => el.getAttribute("data-number") == index);
-            // tabs[0].classList.add("active");
             
-            const parentListItem = el.parentElement;
-            const index = [...parentListItem.parentElement.children].indexOf(parentListItem);
+            const parentListItem = el.parentElement,
+                index = [...parentListItem.parentElement.children].indexOf(parentListItem);
             
+            tabLinks[index].parentElement.classList.add("active");
+
             const panel = [...tabPanels].filter(el => el.getAttribute("data-index") == index);
             panel[0].classList.add("active");
         });
     }
 
-    $(function(){
-        $('a[href^="#"]').on('click', function(event) {
+    $(function() {
+        $('a[href^="#product-tab"]').on('click', function(event) {
             event.preventDefault();
-            
+
             const productTabSoughtFor = $(this).attr("href"),
                 productTabPosition = $(productTabSoughtFor).offset().top;
-
-            // for (let i = 0; i < tabLinks.length; i++) {
-            //     if (tabLinks[i].getAttribute(id) == $(this).attr("href")) {
-            //         tabLinks.classList.add("active");
-            //     }
-            // }
             
             $('html, body').animate({scrollTop: productTabPosition}, 1000);
+
         });
     });
 
