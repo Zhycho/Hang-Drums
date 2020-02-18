@@ -266,7 +266,7 @@ $(document).ready(function () {
             const productTabSoughtFor = $(this).attr("href"),
                 productTabPosition = $(productTabSoughtFor).offset().top;
             
-            $('html, body').animate({scrollTop: productTabPosition}, 1000);
+            $('html, body').animate({scrollTop: productTabPosition - 80}, 1000);
 
         });
     });

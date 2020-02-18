@@ -1336,7 +1336,7 @@ header {
 
     @media (max-width: 480px) {
         flex-wrap: wrap;
-    } 
+    }
 }
 
 .reviews-block-list__item-avatar {
@@ -1345,12 +1345,32 @@ header {
     min-width: 90px;
     overflow: hidden;
     width: 90px;
+    position: relative;
 
     img {
         border-radius: 50%;
+        filter: grayscale(0.2);
         object-fit: cover;
         height: 90px;
+        .trans();
         width: 90px;
+    }
+
+    a {
+        border-radius: 50%;
+        display: block;
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &:hover {
+
+        img {
+            filter: grayscale(0);
+        }
     }
 }
 
@@ -1386,11 +1406,21 @@ header {
     grid-template-columns: 215px 215px 215px;
     margin-bottom: 16px;
 
+    li a {
+        display: block;
+    }
+
     li img {
         display: block;
         height: 135px;
         object-fit: cover;
+        filter: grayscale(0.2);
+        .trans(.3s);
         width: 215px;
+    }
+
+    li:hover img {
+        filter: grayscale(0);
     }
 
     @media (max-width: 992px) {
@@ -1473,13 +1503,18 @@ header {
 
 .reviews-block-list__item-product-name {
 
-    span {
+    a:first-of-type {
         color: @black;
         display: block;
         font-weight: 600;
+        .trans();
+
+        &:hover {
+            color: @blue;
+        }
     }
 
-    a {
+    a:nth-of-type(2) {
         color: @black;
         font-size: 14px;
         text-decoration: underline;
@@ -2102,13 +2137,20 @@ header {
     cursor: pointer;
     height: 60px;
     display: flex;
-    fill: @black;
+    fill: #FFF;
     justify-content: center;
     width: 35px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     .trans();
+
+    svg {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     &:hover {
         fill: @red;
@@ -3235,6 +3277,14 @@ header {
 
         svg {
             fill: #909090;
+            .trans();
+        }
+
+        &:hover {
+
+            svg {
+                fill: #FFF;
+            }
         }
     }
 
@@ -3922,7 +3972,14 @@ header {
 
     .default__slider-nav-prev, .default__slider-nav-next {
         background-color: rgba(0, 0, 0, 0.1);
-        fill: @blue;
+        fill: #FFF;
+
+        svg {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
 
         &:hover {
             fill: @red;
@@ -5101,6 +5158,11 @@ header {
 
 .blog-page__list-item {
     box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.2);
+    .trans(.3s);
+
+    &:hover {
+        box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.2);
+    }
 
     @media (max-width: 768px) {
         max-width: 400px;
@@ -6151,18 +6213,11 @@ header {
 }
 
 .basket-table-mobile__item {
+    margin-bottom: 24px;
 
-}
-
-.basket-table-mobile__item-headline {
-    background-color: @black;
-    color: #FFF;
-    display: block;
-    font-size: 18px;
-    font-weight: 900;
-    padding: 12px 0;
-    text-align: center;
-    width: 100%;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 .basket-table-mobile__item-top {
