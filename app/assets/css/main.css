@@ -995,6 +995,17 @@ header {
 .advantages-block-list__item {
   align-items: center;
   display: flex;
+  position: relative;
+}
+.advantages-block-list__item a {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.advantages-block-list__item:hover .advantages-block-list__item-text-wrapper .advantages-block-list__item-headline {
+  color: #45959a;
 }
 @media (max-width: 768px) {
   .advantages-block-list__item {
@@ -1060,6 +1071,10 @@ header {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 12px;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
 }
 @media (max-width: 1200px) {
   .advantages-block-list__item-headline {

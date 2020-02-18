@@ -1086,6 +1086,20 @@ header {
 .advantages-block-list__item {
     align-items: center;
     display: flex;
+    position: relative;
+
+    a {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+
+    &:hover .advantages-block-list__item-text-wrapper .advantages-block-list__item-headline {
+        color: @blue;
+    }
 
     @media (max-width: 768px) {
         margin: 0 auto;
@@ -1161,6 +1175,7 @@ header {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 12px;
+    .trans();
 
     @media (max-width: 1200px) {
         font-size: 20px;
