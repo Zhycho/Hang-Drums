@@ -507,7 +507,6 @@ header {
             appearance: none;
             background-color: transparent;
             border: 2px solid #e8e8e8;
-            border-radius: 5px;
             color: #FFF;
             cursor: pointer;
             font-family: "FuturaPT";
@@ -528,6 +527,11 @@ header {
 
             option {
                 color: @black;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: @blue;
+                }
             }
         }
 
@@ -1240,7 +1244,12 @@ header {
         }
     }
 
+    a {
+        display: block;
+    }
+
     img {
+        display: block;
         width: 100%;
     }
 }
@@ -2362,16 +2371,20 @@ header {
     display: flex;
     flex-wrap: wrap;
 
-    a {
+    .video-wrapper {
         display: block;
         margin-bottom: 3px;
         width: 100%;
 
-        img {
+        a {
             display: block;
-            height: 265px;
-            object-fit: cover;
-            width: 467px;
+
+            img {
+                display: block;
+                height: 265px;
+                object-fit: cover;
+                width: 467px;
+            }
         }
     }
 
@@ -2396,7 +2409,7 @@ header {
     }
 
     &:nth-of-type(2) {
-        a {
+        .video-wrapper {
             margin-bottom: 0;
             order: 1;
         }
@@ -2423,13 +2436,13 @@ header {
         flex-wrap: nowrap;
         height: 100%;
 
-        a {
+        .video-wrapper {
             align-items: center;
             display: flex;
             height: 50%;
             overflow: hidden;
 
-            img {
+            a img {
                 height: auto;
                 width: 100%;
             }
@@ -2461,10 +2474,14 @@ header {
             padding: 16px 28px;
         }
 
-        a {
+        .video-wrapper {
             height: auto;
             margin-bottom: 0;
             order: 1;
+
+            a {
+                width: 100%;
+            }
         }
     }
 }
@@ -4996,7 +5013,6 @@ header {
                 appearance: none;
                 background-color: transparent;
                 border: 2px solid @black;
-                border-radius: 5px;
                 color: @black;
                 cursor: pointer;
                 font-family: "FuturaPT";
@@ -6865,4 +6881,53 @@ header {
 
 .helpful-information-block_contacts {
     background-color: #f8f8f8;
+}
+
+.video-wrapper {
+    position: relative;
+
+    & > img {
+        display: block;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+    }
+
+    &::after {
+        background-color: rgba(0, 0, 0, 0.1);
+        content: "";
+        display: block;
+        left: 0;
+        height: 100%;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        .trans();
+        width: 100%;
+        z-index: 1;
+    }
+
+    &:hover::after {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+}
+
+.fancybox-content.pop-up {
+
+    @media (max-width: 480px) {
+        padding: 30px 24px;
+    }
+
+    p {
+        color: @black;
+    }
+}
+
+.pop-up__headline {
+    color: @black;
+    margin-bottom: 24px;
+    text-align: center;
 }

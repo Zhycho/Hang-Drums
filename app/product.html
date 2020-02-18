@@ -10,6 +10,8 @@
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.mmenu.all.min.js"></script>
     <script src="assets/js/common.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <title>Hang Drums</title>
 </head>
 <body>
@@ -367,11 +369,11 @@
             <ul class="products-block-list">
                 <li class="products-block-list__item">
                     <span class="products-block-list__item-label products-block-list__item-label_best-seller">Best seller</span>
-                    <a href="product.html" class="products-block-list__item-img">
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-img">
                         <img src="assets/img/product_03.png" alt="">
                         <img src="assets/img/product_01.png" alt="">
                     </a>
-                    <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
                     <div class="products-block-list__item-main">
                         <div class="products-block-list__item-price">
                             <span class="products-block-list__item-price-old">1250 USD</span>
@@ -385,11 +387,11 @@
                 </li>
                 <li class="products-block-list__item">
                     <span class="products-block-list__item-label products-block-list__item-label_new">New</span>
-                    <a href="product.html" class="products-block-list__item-img">
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-img">
                         <img src="assets/img/product_03.png" alt="">
                         <img src="assets/img/product_01.png" alt="">
                     </a>
-                    <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
                     <div class="products-block-list__item-main">
                         <div class="products-block-list__item-price">
                             <span class="products-block-list__item-price-old">1250 USD</span>
@@ -402,11 +404,11 @@
                     </div>
                 </li>
                 <li class="products-block-list__item">
-                    <a href="product.html" class="products-block-list__item-img">
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-img">
                         <img src="assets/img/product_03.png" alt="">
                         <img src="assets/img/product_01.png" alt="">
                     </a>
-                    <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
                     <div class="products-block-list__item-main">
                         <div class="products-block-list__item-price">
                             <span class="products-block-list__item-price-old">1250 USD</span>
@@ -420,11 +422,11 @@
                 </li>
                 <li class="products-block-list__item">
                     <span class="products-block-list__item-label products-block-list__item-label_popular">Popular</span>
-                    <a href="product.html" class="products-block-list__item-img">
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-img">
                         <img src="assets/img/product_03.png" alt="">
                         <img src="assets/img/product_01.png" alt="">
                     </a>
-                    <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
                     <div class="products-block-list__item-main">
                         <div class="products-block-list__item-price">
                             <span class="products-block-list__item-price-old">1250 USD</span>
@@ -437,11 +439,11 @@
                     </div>
                 </li>
                 <li class="products-block-list__item">
-                    <a href="product.html" class="products-block-list__item-img">
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-img">
                         <img src="assets/img/product_03.png" alt="">
                         <img src="assets/img/product_01.png" alt="">
                     </a>
-                    <a href="product.html" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
+                    <a data-fancybox data-src="#pop-up" href="javascript:;" class="products-block-list__item-headline">RAV Pan F Pygmy</a>
                     <div class="products-block-list__item-main">
                         <div class="products-block-list__item-price">
                             <span class="products-block-list__item-price-old">1250 USD</span>
@@ -741,29 +743,44 @@
                     <h2>Videos with RAV Pan F Pygmy</h2>
                     <ul class="product-page-tabs-content-videos__list">
                         <li class="product-page-tabs-content-videos__list-item">
-                            <a href="javascript:;">
-                                <img src="assets/img/video-preview_01.png" alt="">
-                            </a>
+                            <div class="video-wrapper">
+                                <img src="assets/img/youtube-icon.png" alt="youtube-icon">
+                                <a data-fancybox="product-gallery" href="https://www.youtube.com/watch?v=MNvdtTm7QTQ">
+                                    <img src="assets/img/video-preview_01.png">
+                                </a>
+                            </div>
                         </li>
                         <li class="product-page-tabs-content-videos__list-item">
-                            <a href="javascript:;">
-                                <img src="assets/img/video-preview_01.png" alt="">
-                            </a>
+                            <div class="video-wrapper">
+                                <img src="assets/img/youtube-icon.png" alt="youtube-icon">
+                                <a data-fancybox="product-gallery" href="https://www.youtube.com/watch?v=MNvdtTm7QTQ">
+                                    <img src="assets/img/video-preview_01.png">
+                                </a>
+                            </div>
                         </li>
                         <li class="product-page-tabs-content-videos__list-item">
-                            <a href="javascript:;">
-                                <img src="assets/img/video-preview_01.png" alt="">
-                            </a>
+                            <div class="video-wrapper">
+                                <img src="assets/img/youtube-icon.png" alt="youtube-icon">
+                                <a data-fancybox="product-gallery" href="https://www.youtube.com/watch?v=MNvdtTm7QTQ">
+                                    <img src="assets/img/video-preview_01.png">
+                                </a>
+                            </div>
                         </li>
                         <li class="product-page-tabs-content-videos__list-item">
-                            <a href="javascript:;">
-                                <img src="assets/img/video-preview_01.png" alt="">
-                            </a>
+                            <div class="video-wrapper">
+                                <img src="assets/img/youtube-icon.png" alt="youtube-icon">
+                                <a data-fancybox="product-gallery" href="https://www.youtube.com/watch?v=MNvdtTm7QTQ">
+                                    <img src="assets/img/video-preview_01.png">
+                                </a>
+                            </div>
                         </li>
                         <li class="product-page-tabs-content-videos__list-item">
-                            <a href="javascript:;">
-                                <img src="assets/img/video-preview_01.png" alt="">
-                            </a>
+                            <div class="video-wrapper">
+                                <img src="assets/img/youtube-icon.png" alt="youtube-icon">
+                                <a data-fancybox="product-gallery" href="https://www.youtube.com/watch?v=MNvdtTm7QTQ">
+                                    <img src="assets/img/video-preview_01.png">
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -906,6 +923,10 @@
             </div>
         </div>
 
+        <div class="pop-up" id="pop-up">
+            <h2 class="pop-up__headline">RAV Pan F Pygmy</h2>
+            <p>RAV Pan F Pygmy RAV Pan F Pygmy RAV Pan F Pygmy RAV Pan F Pygmy</p>
+        </div>
     </main>
     <footer>
         <div class="footer-top">
