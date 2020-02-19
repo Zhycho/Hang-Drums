@@ -1262,8 +1262,18 @@ header {
 .reviews-block-list__item-rating li {
   fill: #b8b8b8;
   margin-right: 2px;
+  position: relative;
+  z-index: 1;
 }
-.reviews-block-list__item-rating li.active {
+.reviews-block-list__item-rating li svg {
+  fill: #b8b8b8;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.reviews-block-list__item-rating li.active svg {
   fill: #232323;
 }
 .reviews-block-list__item-gallery {
@@ -1939,6 +1949,7 @@ header {
   display: flex;
   fill: #FFF;
   justify-content: center;
+  overflow: hidden;
   width: 35px;
   position: absolute;
   top: 50%;
@@ -2663,6 +2674,11 @@ header {
   justify-content: flex-end;
   padding-right: 56px;
 }
+.footer-top-contact span {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 600;
+}
 .footer-top-contact a {
   color: #FFF;
   font-size: 18px;
@@ -2680,8 +2696,8 @@ header {
   .footer-top-contact {
     padding-right: 0;
   }
-  .footer-top-contact a span {
-    display: none;
+  .footer-top-contact span {
+    font-size: 0;
   }
 }
 @media (max-width: 768px) {
@@ -3163,7 +3179,7 @@ header {
   }
 }
 .see-also-block {
-  padding: 68px 15px 64px;
+  padding: 68px 15px 40px;
 }
 .see-also-block > h2 {
   color: #232323;
@@ -4363,7 +4379,7 @@ header {
 }
 .product-page-tabs-content-videos {
   display: none;
-  padding: 64px 0 80px;
+  padding: 64px 0 24px;
 }
 .product-page-tabs-content-videos .container h2 {
   color: #232323;
@@ -6180,6 +6196,9 @@ header {
 }
 .video-wrapper:hover::after {
   background-color: rgba(0, 0, 0, 0);
+}
+.pop-up {
+  display: none;
 }
 @media (max-width: 480px) {
   .fancybox-content.pop-up {

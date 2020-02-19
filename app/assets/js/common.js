@@ -280,6 +280,68 @@ $(document).ready(function () {
         $(".cookies").hide();
     })
 
+    // Выбор рейтинга в продукте
+
+    let productRating = document.querySelector('.js--reviews-block-list__item-rating'),
+        productRatingItems = document.querySelectorAll('.js--reviews-block-list__item-rating-item');
+
+    productRating.onclick = function(event) {
+        let target = event.target;
+        if (target.classList.contains('js--reviews-block-list__item-rating-item')) {
+            removeClassFromRating(productRatingItems, 'current-active');
+            target.classList.add('active', 'current-active');
+        }
+    }
+
+    productRating.onmouseover = function(event) {
+        let target = event.target;
+        if (target.classList.contains('js--reviews-block-list__item-rating-item')) {
+            removeClassFromRating(productRatingItems, 'active');
+            target.classList.add('active');
+            mouseOverActiveRatingClass(productRatingItems);
+        }
+    }
+
+    productRating.onmouseout = function() {
+        addClassToRating(productRatingItems, 'active');
+        mouseOutActiveRatingClass(productRatingItems);
+    }
+
+    function removeClassFromRating(arr) {
+        for (let i = 0, iLen = arr.length; i < iLen; i++) {
+            for (let j = 1; j < arguments.length; j ++) {
+                productRatingItems[i].classList.remove(arguments[j]);
+            }
+        }
+    }
+
+    function addClassToRating(arr) {
+        for (let i = 0, iLen = arr.length; i < iLen; i++) {
+            for (let j = 1; j < arguments.length; j ++) {
+                productRatingItems[i].classList.add(arguments[j]);
+            }
+        }
+    }
+
+    function mouseOverActiveRatingClass(arr) {
+        for (let i = 0, iLen = arr.length; i < iLen; i++) {
+            if (arr[i].classList.contains('active')) {
+                break;
+            } else {
+                arr[i].classList.add('active');
+            }
+        }
+    }
+
+    function mouseOutActiveRatingClass(arr) {
+        for (let i = arr.length - 1; i >= 1; i--) {
+            if (arr[i].classList.contains('current-active')) {
+                break;
+            } else {
+                arr[i].classList.remove('active');
+            }
+        }
+    }
 
     // MMenu
     let $menu = $("#mobile-burger-menu").mmenu({

@@ -1393,10 +1393,21 @@ header {
     li {
         fill: #b8b8b8;
         margin-right: 2px;
+        position: relative;
+        z-index: 1;
+
+        svg {
+            fill: #b8b8b8;
+            pointer-events: none;
+            .trans(.2s);
+        }
     }
 
     li.active {
-        fill: @black;
+
+        svg {
+            fill: @black;
+        }
     }
 }
 
@@ -2139,6 +2150,7 @@ header {
     display: flex;
     fill: #FFF;
     justify-content: center;
+    overflow: hidden;
     width: 35px;
     position: absolute;
     top: 50%;
@@ -2981,6 +2993,12 @@ header {
     justify-content: flex-end;
     padding-right: 56px;
 
+    span {
+        color: #FFF;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
     a {
         color: #FFF;
         font-size: 18px;
@@ -2996,8 +3014,8 @@ header {
     @media (max-width: 992px) {
         padding-right: 0;
 
-        a span {
-            display: none;
+        span {
+            font-size: 0;
         }
     }
 
@@ -3548,7 +3566,7 @@ header {
 }
 
 .see-also-block {
-    padding: 68px 15px 64px;
+    padding: 68px 15px 40px;
 
     & > h2 {
         color: #232323;
@@ -4921,7 +4939,7 @@ header {
 
 .product-page-tabs-content-videos {
     display: none;
-    padding: 64px 0 80px;
+    padding: 64px 0 24px;
 
     .container {
 
@@ -6968,6 +6986,10 @@ header {
     &:hover::after {
         background-color: rgba(0, 0, 0, 0.0);
     }
+}
+
+.pop-up {
+    display: none;
 }
 
 .fancybox-content.pop-up {
