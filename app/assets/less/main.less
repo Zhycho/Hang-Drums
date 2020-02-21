@@ -893,10 +893,6 @@ header {
     }
 }
 
-.main-bunner__slider {
-    
-}
-
 .main-bunner__slider-item {
     overflow: hidden;
     position: relative;
@@ -910,13 +906,6 @@ header {
         left: 50%;
         top: 50%;
         transform: translate(-705px, -50%);
-
-        h2 {
-            color: @black;
-            font-size: 60px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
 
         span {
             color: @black;
@@ -976,10 +965,6 @@ header {
     @media (max-width: 992px)  {
         & > div {
 
-            h2 {
-                font-size: 44px;
-            }
-
             span {
                 font-size: 20px;
             }
@@ -994,10 +979,6 @@ header {
         }
 
         & > div {
-
-            h2 {
-                font-size: 32px;
-            }
 
             span {
                 font-size: 16px;
@@ -1169,10 +1150,6 @@ header {
     }
 }
 
-.advantages-block-list__item-text-wrapper {
-
-}
-
 .advantages-block-list__item-headline {
     color: #FFF;
     display: block;
@@ -1228,12 +1205,6 @@ header {
 }
 
 .specific-product-block__half {
-    h2 {
-        color: #FFF;
-        font-size: 41px;
-        font-weight: 600;
-        margin-bottom: 24px;
-    }
 
     &:first-of-type {
         margin-right: 28px;
@@ -1297,12 +1268,8 @@ header {
 .reviews-block {
     padding: 72px 15px;
 
-    h2 {
-        color: @black;
-        font-size: 41px;
-        font-weight: 600;
+    .usual-headline {
         margin-bottom: 60px;
-        text-align: center;
     }
 
     @media (max-width: 992px) {
@@ -1310,7 +1277,7 @@ header {
     }
 
     @media (max-width: 768px) {
-        h2 {
+        .usual-headline {
             margin-bottom: 40px;
         }
     }
@@ -1615,7 +1582,7 @@ header {
 .products-block {
     padding: 68px 15px 64px;
 
-    h2 {
+    .usual-headline {
         color: @black;
         font-size: 41px;
         font-weight: 600;
@@ -1626,7 +1593,7 @@ header {
     @media (max-width: 992px) {
         padding: 40px 15px;
 
-        h2 {
+        .usual-headline {
             margin-bottom: 40px;
         }
     }
@@ -2004,7 +1971,7 @@ header {
             }
         }
 
-        h2 {
+        .usual-headline-small {
             color: #FFF;
         }
 
@@ -2030,12 +1997,8 @@ header {
         }
     }
 
-    & > .container h2 {
-        color: @black;
-        font-size: 30px;
-        font-weight: 600;
+    & > .container .usual-headline-small {
         margin-bottom: 76px;
-        text-align: center;
     }
 
     .products-block-list {
@@ -2095,7 +2058,7 @@ header {
             background-color: @black;
             padding-bottom: 40px;
 
-            h2 {
+            .usual-headline-small {
                 color: #FFF;
                 font-size: 26px;
                 font-weight: 400;
@@ -2202,13 +2165,6 @@ header {
     justify-content: center;
     margin-bottom: 80px;
     position: relative;
-    
-    h2 {
-        color: @black;
-        font-size: 30px;
-        font-weight: 600;
-        text-align: center;
-    }
 
     a {
         background-color: @black;
@@ -2363,8 +2319,9 @@ header {
     .block-headline-wrapper {
         margin-bottom: 56px;
 
-        h2 {
+        .usual-headline {
             color: #FFF;
+            margin-bottom: 0;
         }
 
         a {
@@ -2546,6 +2503,10 @@ header {
 .about-manufacturer {
     padding: 80px 0 92px;
 
+    .usual-headline {
+        margin-bottom: 0;
+    }
+
     @media (max-width: 992px) {
         padding: 40px 0;
 
@@ -2555,6 +2516,10 @@ header {
             a {
                 display: none;
             }
+        }
+
+        .block-headline-wrapper {
+            height: auto;
         }
     }
 }
@@ -2658,7 +2623,7 @@ header {
     background-color: #f8f8f8;
     padding: 72px 0 88px;
 
-    h2 {
+    .usual-headline {
         color: @black;
         font-size: 41px;
         font-weight: 600;
@@ -2669,14 +2634,10 @@ header {
     @media (max-width: 992px) {
         padding: 40px 0;
 
-        h2 {
+        .usual-headline {
             margin-bottom: 32px;
         }
     }
-}
-
-.faq-block-list {
-
 }
 
 .faq-block-list__item {
@@ -2783,7 +2744,7 @@ header {
 .helpful-information-block {
     padding: 52px 0 80px;
 
-    h2 {
+    .usual-headline {
         color: @black;
         font-size: 41px;
         font-weight: 600;
@@ -2794,7 +2755,7 @@ header {
     @media (max-width: 992px) {
         padding: 40px 0;
 
-        h2 {
+        .usual-headline {
             margin-bottom: 32px;
         }
     }
@@ -3568,7 +3529,7 @@ header {
 .see-also-block {
     padding: 68px 15px 40px;
 
-    & > h2 {
+    & > .usual-headline {
         color: #232323;
         font-size: 41px;
         font-weight: 600;
@@ -3579,7 +3540,7 @@ header {
     @media (max-width: 768px) {
         padding: 40px 15px;
 
-        h2 {
+        .usual-headline {
             margin-bottom: 40px;
         }
     }
@@ -3654,7 +3615,7 @@ header {
     .container {
         max-width: 1050px;
 
-        h2 {
+        .drums-tune-comparison-block__headline {
             color: #FFF;
             font-size: 41px;
             font-weight: 600;
@@ -3668,7 +3629,7 @@ header {
 
         .container {
 
-            h2 {
+            .drums-tune-comparison-block__headline {
                 margin-bottom: 44px;
             }
         }
@@ -3747,20 +3708,20 @@ header {
 .steps-get-drums-block {
     background-color: @black;
 
-    h2 {
-        background-color: #fff;
-        color: @black;
-        font-size: 41px;
-        font-weight: 600;
-        text-align: center;
-        padding: 88px 15px;
-    }
-
     @media (max-width: 576px) {
         .container {
             padding: 0;
         }
     }
+}
+
+.steps-get-drums-block__headline {
+    background-color: #fff;
+    color: @black;
+    font-size: 41px;
+    font-weight: 600;
+    text-align: center;
+    padding: 88px 15px;
 }
 
 .steps-get-drums-block__list {
@@ -4390,7 +4351,7 @@ header {
 
 .product-page-products-list {
 
-    h2 {
+    .product-page-products-list__headline {
         color: @black;
         font-size: 41px;
         font-weight: 600;
@@ -4442,7 +4403,7 @@ header {
     }
 
     @media (max-width: 1200px) {
-        h2 {
+        .product-page-products-list__headline {
             margin-bottom: 40px;
         }
 
@@ -4478,11 +4439,6 @@ header {
     &:hover {
         text-decoration: none;
     }
-}
-
-
-.product-page-tabs-block {
-
 }
 
 .product-page-tabs-wrapper {
@@ -4943,7 +4899,7 @@ header {
 
     .container {
 
-        h2 {
+        .usual-headline-small {
             color: @black;
             font-size: 30px;
             font-weight: 600;
@@ -4957,7 +4913,7 @@ header {
 
         .container {
 
-            h2 {
+            .usual-headline-small {
                 margin-bottom: 40px;
             }
         }
@@ -5195,7 +5151,7 @@ header {
         width: 100%;
     }
 
-    h2 {
+    .blog-page__list-item-headline {
         bottom: 32px;
         color: #FFF;
         left: 32px;
@@ -6015,10 +5971,6 @@ header {
     margin-bottom: 10px;
 }
 
-.form-payment-details__coupon-wrapper {
-
-}
-
 .form-payment-details__coupon {
     margin-bottom: 36px;
     max-width: 375px;
@@ -6475,10 +6427,6 @@ header {
     @media (max-width: 768px) {
         font-size: 20px;
     }
-}
-
-.basket-error-methods {
-
 }
 
 .basket-error-methods__item {
@@ -7006,5 +6954,49 @@ header {
 .pop-up__headline {
     color: @black;
     margin-bottom: 24px;
+    text-align: center;
+}
+
+
+// заголовки
+
+.main-bunner__slider-item-headline {
+    color: @black;
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 12px;
+
+    @media (max-width: 992px) {
+        font-size: 44px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
+}
+
+.specific-product-block__headline {
+    color: #FFF;
+    font-size: 41px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.usual-headline {
+    color: #232323;
+    font-size: 41px;
+    font-weight: 600;
+    margin-bottom: 52px;
+    text-align: center;
+
+    @media (max-width: 992px) {
+        margin-bottom: 32px;
+    }
+}
+
+.usual-headline-small {
+    color: #232323;
+    font-size: 30px;
+    font-weight: 600;
     text-align: center;
 }
