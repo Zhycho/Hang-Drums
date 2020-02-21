@@ -120,6 +120,55 @@ $(document).ready(function () {
         ]
     });
 
+    // Слайдеры в pop-up товаре
+
+    $('.js--products-pop-up').fancybox({
+        autoSize: true,
+        afterShow: function() {
+            $('.js--product-page-block__slider-projector_pop-up').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                swipe: true,
+                speed: 700,
+                fade: true,
+                prevArrow: $('.js--product-page-block__slider-projector-nav-prev_pop-up'),
+                nextArrow: $('.js--product-page-block__slider-projector-nav-next_pop-up'),
+                asNavFor: '.js--product-page-block__slider-nav_pop-up',
+                responsive: [
+                    {
+                        breakpoint: 661,
+                        settings: {
+                            swipe: true
+                        }
+                    }
+                ]
+            });
+        
+            $('.js--product-page-block__slider-nav_pop-up').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                asNavFor: '.js--product-page-block__slider-projector_pop-up',
+                dots: false,
+                arrows: false,
+                focusOnSelect: true,
+                responsive: [
+                    {
+                        breakpoint: 1441,
+                        settings: {
+                            slidesToShow: 5,
+                        }
+                    },
+                    {
+                        breakpoint: 577,
+                        settings: {
+                            slidesToShow: 4,
+                        }
+                    }
+                ]
+            });
+        }
+    });
+
     // Типичный слайдер в article
     $('.js--typical-slider__projector').slick({
         slidesToShow: 1,

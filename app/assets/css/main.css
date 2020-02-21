@@ -6175,6 +6175,12 @@ header {
 .pop-up {
   display: none;
 }
+.fancybox-stage .fancybox-slide {
+  padding: 24px;
+}
+.fancybox-content.pop-up {
+  padding: 28px;
+}
 @media (max-width: 480px) {
   .fancybox-content.pop-up {
     padding: 30px 24px;
@@ -6182,6 +6188,25 @@ header {
 }
 .fancybox-content.pop-up p {
   color: #232323;
+}
+.fancybox-content.pop-up .product-page-block {
+  max-width: 1320px;
+  overflow: hidden;
+  padding: 0;
+}
+.fancybox-content.pop-up .product-page-block__info-main {
+  padding-bottom: 40px;
+}
+.product-pop-description {
+  padding: 0 32px;
+}
+.product-pop-description p {
+  font-family: "FuturaPTBook";
+  font-size: 24px;
+}
+.fancybox-slide--html .pop-up .fancybox-close-small {
+  color: red;
+  padding: 0;
 }
 .pop-up__headline {
   color: #232323;

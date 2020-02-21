@@ -6940,7 +6940,12 @@ header {
     display: none;
 }
 
+.fancybox-stage .fancybox-slide {
+    padding: 24px;
+}
+
 .fancybox-content.pop-up {
+    padding: 28px;
 
     @media (max-width: 480px) {
         padding: 30px 24px;
@@ -6949,6 +6954,34 @@ header {
     p {
         color: @black;
     }
+
+    .product-page-block {
+        max-width: 1320px;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .product-page-block__info-main {
+        padding-bottom: 40px;
+    }
+}
+
+.product-pop-description {
+    padding: 0 32px;
+
+    p {
+        .f-book();
+        font-size: 24px;
+    }
+}
+
+.fancybox-slide--html .pop-up  .fancybox-close-small {
+    color: red;
+    padding: 0;
+}
+
+.fancybox-close-small {
+
 }
 
 .pop-up__headline {
