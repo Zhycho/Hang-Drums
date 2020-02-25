@@ -10,6 +10,7 @@ const gulp = require('gulp'),
 gulp.task('less', function(){
     return gulp.src('app/assets/less/**/*.less')
         .pipe(less())
+        .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('app/assets/css'))
         .pipe(browserSync.reload({stream: true}))
 });

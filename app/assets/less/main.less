@@ -6942,13 +6942,39 @@ header {
 
 .fancybox-stage .fancybox-slide {
     padding: 24px;
+
+    @media (max-width: 576px) {
+        padding: 24px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pop-up.fancybox-content .product-page-block__slider {
+        width: 248px;
+    }
+
+    .pop-up.fancybox-content .product-page-block__mobile-header {
+        width: 248px;
+    }
+
+    .pop-up.fancybox-content .product-page-block__info {
+        width: 248px;
+    }
+
+    .pop-up.fancybox-content .product-page-block__info-main {
+        padding: 0 0 58px;
+    }
+
+    .pop-up.fancybox-content .product-page-block.product-page-block_common .product-page-block__info-main-price-wrapper {
+        margin-top: 24px;
+    }
 }
 
 .fancybox-content.pop-up {
-    padding: 28px;
+    padding: 40px 28px 28px;
 
     @media (max-width: 480px) {
-        padding: 30px 24px;
+        padding: 40px 24px 28px;
     }
 
     p {
@@ -6973,11 +6999,24 @@ header {
         .f-book();
         font-size: 24px;
     }
+
+    @media (max-width: 576px) {
+        padding: 0;
+
+        p {
+            font-size: 18px;
+        }
+    }
 }
 
 .fancybox-slide--html .pop-up  .fancybox-close-small {
-    color: red;
+    color: @black;
     padding: 0;
+    .trans(.3s);
+}
+
+.fancybox-slide--html .pop-up  .fancybox-close-small:hover {
+    color: @red;
 }
 
 .fancybox-close-small {
